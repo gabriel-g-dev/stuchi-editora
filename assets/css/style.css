@@ -755,6 +755,16 @@ a {
   overflow: hidden;
 }
 
+.gallery-grid--event {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 980px) {
+  .gallery-grid--event {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* ========== IMPRENSA ========== */
 .logo-grid {
