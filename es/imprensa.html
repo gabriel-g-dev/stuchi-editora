@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Imprensa | Stuchi Editora</title>
+    <title>Prensa | Stuchi Editora</title>
     <meta name="description"
-        content="Acompanhe as matérias, entrevistas e reportagens sobre a Stuchi Editora. Autoridade e reconhecimento no cenário literário." />
+        content="Siga las noticias, entrevistas y reportajes sobre Stuchi Editora. Autoridad y reconocimiento en el escenario literario." />
     <meta name="theme-color" content="#0b0b0d" />
 
     <!-- Fonts -->
@@ -16,11 +16,11 @@
         href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500,700&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
-    <!-- Anchor topo -->
+    <!-- Anchor original -->
     <div id="top"></div>
 
     <!-- Progress bar -->
@@ -30,37 +30,38 @@
 
     <header class="header" id="siteHeader">
         <div class="container header__inner">
-            <a class="brand" href="index.html" aria-label="Ir para o início"
-                title="Stuchi Editora | Formando novos autores">
-                <img src="assets/img/logo-stuchi.png" alt="Stuchi Editora - Formando novos autores" class="brand__logo">
+            <a class="brand" href="index.html" aria-label="Ir al inicio"
+                title="Stuchi Editora | Formando nuevos autores">
+                <img src="../assets/img/logo-stuchi.png" alt="Stuchi Editora - Formando nuevos autores"
+                    class="brand__logo">
             </a>
 
-            <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
+            <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
                 <span class="menu-btn__icon" aria-hidden="true"></span>
             </button>
 
-            <nav class="nav" id="navMenu" aria-label="Menu principal">
-                <a href="index.html" class="nav__link">Início</a>
-                <a href="publique-conosco.html" class="nav__link">Publique Conosco</a>
-                <a href="lancamentos.html" class="nav__link">Lançamentos</a>
-                <a href="mentorias.html" class="nav__link">Mentorias</a>
+            <nav class="nav" id="navMenu" aria-label="Menú principal">
+                <a href="index.html" class="nav__link">Inicio</a>
+                <a href="publique-conosco.html" class="nav__link">Publica con Nosotros</a>
+                <a href="lancamentos.html" class="nav__link">Lanzamientos</a>
+                <a href="mentorias.html" class="nav__link">Mentorías</a>
                 <a href="podcast.html" class="nav__link">Podcast</a>
-                <a href="imprensa.html" class="nav__link is-active">Imprensa</a>
+                <a href="imprensa.html" class="nav__link is-active">Prensa</a>
                 <a href="portugal.html" class="nav__link">Portugal</a>
-                <a href="#contato" class="btn btn--outline nav__cta">Contato</a>
+                <a href="#contato" class="btn btn--outline nav__cta">Contacto</a>
 
                 <!-- Language Selector -->
                 <div class="lang-select"
                     style="display:flex; gap:8px; margin-left:16px; font-weight:600; font-size:0.9rem;">
-                    <span style="color:#fff; opacity:1; cursor:default;">PT</span>
+                    <a href="../imprensa.html"
+                        style="color:#fff; opacity:0.6; text-decoration:none; transition:opacity .2s;"
+                        onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">PT</a>
                     <span style="color:#fff; opacity:0.3;">|</span>
-                    <a href="en/imprensa.html"
+                    <a href="../en/imprensa.html"
                         style="color:#fff; opacity:0.6; text-decoration:none; transition:opacity .2s;"
                         onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">EN</a>
                     <span style="color:#fff; opacity:0.3;">|</span>
-                    <a href="es/imprensa.html"
-                        style="color:#fff; opacity:0.6; text-decoration:none; transition:opacity .2s;"
-                        onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">ES</a>
+                    <span style="color:#fff; opacity:1; cursor:default;">ES</span>
                 </div>
             </nav>
         </div>
@@ -72,17 +73,18 @@
             <div class="hero__bg" aria-hidden="true"></div>
 
             <div class="container center reveal">
-                <div class="pill">Sala de Imprensa • Releases • Mídia</div>
+                <div class="pill">Sala de Prensa • Comunicados • Medios</div>
                 <h1 class="hero__title">
-                    Notícias e
-                    <span class="hero__title-accent">Repercussão.</span>
+                    Noticias y
+                    <span class="hero__title-accent">Repercusión.</span>
                 </h1>
                 <p class="hero__subtitle" style="margin-left:auto; margin-right:auto;">
-                    Acompanhe os destaques na mídia, comunicados oficiais e novidades do nosso ecossistema editorial.
+                    Siga los destacados en los medios, comunicados oficiales y novedades de nuestro ecosistema
+                    editorial.
                 </p>
                 <div class="hero__actions" style="justify-content:center;">
-                    <a href="#destaques" class="btn btn--solid">Últimas notícias</a>
-                    <a href="#contato" class="btn btn--outline">Falar com assessoria</a>
+                    <a href="#destaques" class="btn btn--solid">Últimas noticias</a>
+                    <a href="#contato" class="btn btn--outline">Hablar con asesoría</a>
                 </div>
             </div>
         </section>
@@ -93,7 +95,7 @@
             <div class="container">
                 <p class="center muted"
                     style="margin-bottom:20px; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.05em;">
-                    Veículos de Destaque</p>
+                    Vehículos Destacados</p>
                 <div class="logo-grid reveal">
                     <!-- Logos de mídia -->
                     <div class="logo-item" style="font-weight:700; opacity:0.8;">TRIBUNA SP</div>
@@ -108,8 +110,8 @@
         <section id="destaques" class="section">
             <div class="container">
                 <div class="section__head reveal">
-                    <h2 class="section__title">Em Evidência</h2>
-                    <p class="section__subtitle">Matérias e artigos recentes.</p>
+                    <h2 class="section__title">En Evidencia</h2>
+                    <p class="section__subtitle">Noticias y artículos recientes.</p>
                 </div>
 
                 <div class="press-grid reveal">
@@ -122,15 +124,17 @@
                             <span class="media-date"
                                 style="background:#fff; color:#000; font-weight:bold; padding:2px 8px; border-radius:4px;">CAPA</span>
                         </div>
-                        <h3 class="media-card__title" style="font-size:1.8rem; margin-bottom:16px;">"Editora Stuchi
-                            chega à Europa com filial em Portugal"</h3>
+                        <h3 class="media-card__title" style="font-size:1.8rem; margin-bottom:16px;">"Editorial Stuchi
+                            llega a Europa con filial en Portugal"</h3>
                         <p class="media-card__text" style="font-size:1.1rem; max-width:800px;">
-                            Matéria exclusiva detalhando nossa expansão internacional, a nova sede em Setúbal e as
-                            oportunidades para autores brasileiros no mercado europeu.
+                            Artículo exclusivo detallando nuestra expansión internacional, la nueva sede en Setúbal y
+                            las
+                            oportunidades para autores brasileños en el mercado europeo.
                         </p>
                         <a href="https://tribunasaopaulo.com/editora-stuchi-chega-a-europa-com-filial-emportugal/"
-                            target="_blank" rel="noopener" class="btn btn--outline" style="margin-top:24px;">Ler matéria
-                            completa na íntegra</a>
+                            target="_blank" rel="noopener" class="btn btn--outline" style="margin-top:24px;">Leer
+                            artículo
+                            completo</a>
                     </article>
 
                     <!-- Matéria 2 (Gazeta SP) -->
@@ -139,14 +143,15 @@
                             <span class="media-source">Gazeta São Paulo</span>
                             <span class="media-date">2025</span>
                         </div>
-                        <h3 class="media-card__title">Mulheres de Elite: Networking para escritoras</h3>
+                        <h3 class="media-card__title">Mujeres de Élite: Networking para escritoras</h3>
                         <p class="media-card__text">
-                            Rodrigo Stuchi organiza evento exclusivo no Rooftop Souq, promovendo conexão e oportunidades
-                            para mulheres do mercado editorial.
+                            Rodrigo Stuchi organiza evento exclusivo en el Rooftop Souq, promoviendo conexión y
+                            oportunidades
+                            para mujeres del mercado editorial.
                         </p>
                         <a href="https://gazetasaopaulo.com/mulheres-de-elite-networking-para-escritoras-organizado-por-rodrigo-stuchi-ceo-da-editora-stuchi-no-rooftop-souq/"
-                            target="_blank" rel="noopener" class="link" style="margin-top:auto; font-size:0.9rem;">Ler
-                            notícia →</a>
+                            target="_blank" rel="noopener" class="link" style="margin-top:auto; font-size:0.9rem;">Leer
+                            noticia →</a>
                     </article>
 
                     <!-- Matéria 3 (Gazeta SP) -->
@@ -155,14 +160,15 @@
                             <span class="media-source">Gazeta São Paulo</span>
                             <span class="media-date">2025</span>
                         </div>
-                        <h3 class="media-card__title">1ª edição do "Papo de Escritor" no Teatro Bibi Ferreira</h3>
+                        <h3 class="media-card__title">1ª edición de "Charla de Escritor" en el Teatro Bibi Ferreira</h3>
                         <p class="media-card__text">
-                            Evento promovido pela editora debate literatura, carreira e mercado em um dos palcos mais
-                            tradicionais de SP.
+                            Evento promovido por la editorial debate literatura, carrera y mercado en uno de los
+                            escenarios más
+                            tradicionales de SP.
                         </p>
                         <a href="https://gazetasaopaulo.com/rodrigo-stuchi-promove-1a-edicao-do-papo-de-escritor-no-teatro-bibi-ferreira/"
-                            target="_blank" rel="noopener" class="link" style="margin-top:auto; font-size:0.9rem;">Ler
-                            notícia →</a>
+                            target="_blank" rel="noopener" class="link" style="margin-top:auto; font-size:0.9rem;">Leer
+                            noticia →</a>
                     </article>
 
                     <!-- Matéria 4 (Tribuna SP) -->
@@ -171,14 +177,14 @@
                             <span class="media-source">Tribuna São Paulo</span>
                             <span class="media-date">2025</span>
                         </div>
-                        <h3 class="media-card__title">Advogadas renomadas lançam livro inovador</h3>
+                        <h3 class="media-card__title">Abogadas renombradas lanzan libro innovador</h3>
                         <p class="media-card__text">
-                            Obra coletiva reúne especialistas de diversos estados do Brasil em evento exclusivo
-                            realizado na capital paulista.
+                            Obra colectiva reúne especialistas de diversos estados de Brasil en evento exclusivo
+                            realizado en la capital paulista.
                         </p>
                         <a href="https://tribunasaopaulo.com/por-meio-da-editora-stuchi-advogadas-renomadas-de-diversos-estados-do-brasil-lancam-livro-inovador-em-evento-exclusivo-na-capital-paulista/"
-                            target="_blank" rel="noopener" class="link" style="margin-top:auto; font-size:0.9rem;">Ler
-                            notícia →</a>
+                            target="_blank" rel="noopener" class="link" style="margin-top:auto; font-size:0.9rem;">Leer
+                            noticia →</a>
                     </article>
 
                     <!-- Matéria 5 (O Imparcial) -->
@@ -187,14 +193,15 @@
                             <span class="media-source">O Imparcial</span>
                             <span class="media-date">2025</span>
                         </div>
-                        <h3 class="media-card__title">Editora Stuchi lança novo livro "Como Demitir Seu Chefe"</h3>
+                        <h3 class="media-card__title">Editorial Stuchi lanza nuevo libro "Como Demitir Seu Chefe"</h3>
                         <p class="media-card__text">
-                            Lançamento da co-produção que reúne seis escritores em noite de autógrafos e networking na
+                            Lanzamiento de la coproducción que reúne seis escritores en noche de autógrafos y networking
+                            en la
                             capital paulista.
                         </p>
                         <a href="https://www.imparcial.com.br/noticias/editora-stuchi-lanca-2-livro-na-capital-paulista,61161"
-                            target="_blank" rel="noopener" class="link" style="margin-top:auto; font-size:0.9rem;">Ler
-                            notícia →</a>
+                            target="_blank" rel="noopener" class="link" style="margin-top:auto; font-size:0.9rem;">Leer
+                            noticia →</a>
                     </article>
 
                     <!-- Matéria 6 (O Imparcial) -->
@@ -203,14 +210,15 @@
                             <span class="media-source">O Imparcial</span>
                             <span class="media-date">2025</span>
                         </div>
-                        <h3 class="media-card__title">Escritor lança livro baseado na trajetória de Anitta</h3>
+                        <h3 class="media-card__title">Escritor lanza libro basado en la trayectoria de Anitta</h3>
                         <p class="media-card__text">
-                            Rodrigo Stuchi apresenta "O que eu aprendi com a Malandra", focando em gestão de carreira e
-                            marketing pessoal.
+                            Rodrigo Stuchi presenta "O que eu aprendi com a Malandra", enfocándose en gestión de carrera
+                            y
+                            marketing personal.
                         </p>
                         <a href="https://www.imparcial.com.br/noticias/escritor-prudentino-lanca-livro-baseado-na-trajetoria-de-anitta,55599"
-                            target="_blank" rel="noopener" class="link" style="margin-top:auto; font-size:0.9rem;">Ler
-                            notícia →</a>
+                            target="_blank" rel="noopener" class="link" style="margin-top:auto; font-size:0.9rem;">Leer
+                            noticia →</a>
                     </article>
 
                     <!-- Matéria 7 (G1) -->
@@ -219,15 +227,16 @@
                             <span class="media-source">G1</span>
                             <span class="media-date">2023</span>
                         </div>
-                        <h3 class="media-card__title">Com mensagem de fé e perseverança, escritor prudentino lança
-                            livros</h3>
+                        <h3 class="media-card__title">Con mensaje de fe y perseverancia, escritor prudentino lanza
+                            libros</h3>
                         <p class="media-card__text">
-                            Matéria do G1 destaca o lançamento de livros publicados pela Editora Stuchi, evidenciando a
-                            trajetória do autor e o trabalho editorial desenvolvido.
+                            Artículo del G1 destaca el lanzamiento de libros publicados por Editorial Stuchi,
+                            evidenciando la
+                            trayectoria del autor y el trabajo editorial desarrollado.
                         </p>
                         <a href="https://g1.globo.com/sp/presidente-prudente-regiao/noticia/2023/10/05/com-mensagem-de-fe-e-perseveranca-escritor-prudentino-lanca-livros-de-romance-e-contos-musicais.ghtml"
-                            target="_blank" rel="noopener" class="link" style="margin-top:auto; font-size:0.9rem;">Ler
-                            matéria completa →</a>
+                            target="_blank" rel="noopener" class="link" style="margin-top:auto; font-size:0.9rem;">Leer
+                            artículo completo →</a>
                     </article>
 
                 </div>
@@ -238,14 +247,14 @@
         <section class="section section--alt">
             <div class="container">
                 <div class="section__head reveal">
-                    <h2 class="section__title">Entrevistas e Coberturas</h2>
-                    <p class="section__subtitle">Participações em eventos e canais parceiros.</p>
+                    <h2 class="section__title">Entrevistas y Coberturas</h2>
+                    <p class="section__subtitle">Participaciones en eventos y canales asociados.</p>
                 </div>
 
                 <div class="grid grid--3">
                     <article class="card reveal">
-                        <h3 class="card__title">Bienal do Livro 2025</h3>
-                        <p class="card__text">Cobertura completa do estande da Stuchi e sessões de autógrafos.</p>
+                        <h3 class="card__title">Bienal del Libro 2025</h3>
+                        <p class="card__text">Cobertura completa del stand de Stuchi y sesiones de autógrafos.</p>
                         <div style="margin-top:10px;">
                             <span class="agenda-tag" style="font-size:0.7rem;">Evento</span>
                         </div>
@@ -253,18 +262,19 @@
 
                     <article class="card reveal">
                         <h3 class="card__title">Entrevista TV Cultura</h3>
-                        <p class="card__text">Matéria sobre a importância da leitura na infância e novos projetos
-                            infantojuvenis.</p>
+                        <p class="card__text">Reportaje sobre la importancia de la lectura en la infancia y nuevos
+                            proyectos
+                            infantojuveniles.</p>
                         <div style="margin-top:10px;">
                             <span class="agenda-tag" style="font-size:0.7rem;">TV</span>
                         </div>
                     </article>
 
                     <article class="card reveal">
-                        <h3 class="card__title">Painel: Futuro do Livro</h3>
-                        <p class="card__text">Participação na mesa redonda sobre tecnologia e literatura.</p>
+                        <h3 class="card__title">Panel: Futuro del Libro</h3>
+                        <p class="card__text">Participación en la mesa redonda sobre tecnología y literatura.</p>
                         <div style="margin-top:10px;">
-                            <span class="agenda-tag" style="font-size:0.7rem;">Palestra</span>
+                            <span class="agenda-tag" style="font-size:0.7rem;">Conferencia</span>
                         </div>
                     </article>
                 </div>
@@ -276,10 +286,10 @@
             <div class="container">
                 <div class="cta__box reveal">
                     <div style="max-width:600px;">
-                        <h3>Compromisso Cultural</h3>
+                        <h3>Compromiso Cultural</h3>
                         <p>
-                            A Stuchi Editora entende a comunicação como parte fundamental da formação de cultura.
-                            Estamos sempre abertos para colaborar com veículos de imprensa que valorizam a literatura
+                            Stuchi Editora entiende la comunicación como parte fundamental de la formación de cultura.
+                            Estamos siempre abiertos para colaborar con vehículos de prensa que valoran la literatura
                             nacional.
                         </p>
                     </div>
@@ -294,16 +304,16 @@
             <div class="container">
                 <div class="contact reveal">
                     <div class="contact__head">
-                        <h2 class="section__title">Assessoria de Imprensa</h2>
-                        <p class="section__subtitle">Canal exclusivo para jornalistas e criadores de conteúdo.</p>
+                        <h2 class="section__title">Asesoría de Prensa</h2>
+                        <p class="section__subtitle">Canal exclusivo para periodistas y creadores de contenido.</p>
                     </div>
 
                     <div class="contact__grid">
                         <!-- Único card centralizado ou lista -->
                         <div class="contact__item" style="grid-column: span 3;">
                             <div style="display:flex; flex-direction:column; gap:6px;">
-                                <h3 style="font-size:1.4rem;">Fale com nossa assessoria</h3>
-                                <p class="muted">Solicitação de releases, agendamento de entrevistas e kits de imprensa.
+                                <h3 style="font-size:1.4rem;">Hable con nuestra asesoría</h3>
+                                <p class="muted">Solicitud de comunicados, programación de entrevistas y kits de prensa.
                                 </p>
 
                                 <div style="margin-top:16px; display:flex; gap:16px; flex-wrap:wrap;">
@@ -311,7 +321,7 @@
                                         target="_blank" rel="noopener" class="btn btn--outline">✉️
                                         Contatos@stuchieditora.com</a>
                                     <a href="https://wa.me/5511969569809" class="btn btn--outline">💬 WhatsApp
-                                        Imprensa</a>
+                                        Prensa</a>
                                     <a href="https://www.instagram.com/stuchi_editora/" target="_blank" rel="noopener"
                                         class="btn btn--outline">📷 Instagram</a>
                                 </div>
@@ -324,13 +334,13 @@
 
         <footer class="footer">
             <div class="container footer__inner">
-                <p>© 2026 Stuchi Editora — Formando novos autores.</p>
-                <button class="link link--btn" id="backToTop" type="button">Voltar ao topo ↑</button>
+                <p>© 2026 Stuchi Editora — Todos los derechos reservados.</p>
+                <button class="link link--btn" id="backToTop" type="button">Volver arriba ↑</button>
             </div>
         </footer>
     </main>
 
-    <script src="assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 
 </html>

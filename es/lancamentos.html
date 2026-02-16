@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lançamentos | Stuchi Editora</title>
+    <title>Lanzamientos | Stuchi Editora</title>
     <meta name="description"
-        content="Conheça os livros publicados pela Stuchi Editora. Obras de ficção, poesia e técnica, desenvolvidas com orientação editorial profissional." />
+        content="Conozca los libros publicados por Stuchi Editora. Obras de ficción, poesía y técnica, desarrolladas con orientación editorial profesional." />
     <meta name="theme-color" content="#0b0b0d" />
 
     <!-- Fonts -->
@@ -16,11 +16,11 @@
         href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500,700&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
-    <!-- Anchor topo -->
+    <!-- Anchor top -->
     <div id="top"></div>
 
     <!-- Progress bar -->
@@ -30,37 +30,38 @@
 
     <header class="header" id="siteHeader">
         <div class="container header__inner">
-            <a class="brand" href="index.html" aria-label="Ir para o início"
-                title="Stuchi Editora | Formando novos autores">
-                <img src="assets/img/logo-stuchi.png" alt="Stuchi Editora - Formando novos autores" class="brand__logo">
+            <a class="brand" href="index.html" aria-label="Ir al inicio"
+                title="Stuchi Editora | Formando nuevos autores">
+                <img src="../assets/img/logo-stuchi.png" alt="Stuchi Editora - Formando nuevos autores"
+                    class="brand__logo">
             </a>
 
-            <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
+            <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
                 <span class="menu-btn__icon" aria-hidden="true"></span>
             </button>
 
-            <nav class="nav" id="navMenu" aria-label="Menu principal">
-                <a href="index.html" class="nav__link">Início</a>
-                <a href="publique-conosco.html" class="nav__link">Publique Conosco</a>
-                <a href="lancamentos.html" class="nav__link is-active">Lançamentos</a>
-                <a href="mentorias.html" class="nav__link">Mentorias</a>
+            <nav class="nav" id="navMenu" aria-label="Menú principal">
+                <a href="index.html" class="nav__link">Inicio</a>
+                <a href="publique-conosco.html" class="nav__link">Publica con Nosotros</a>
+                <a href="lancamentos.html" class="nav__link is-active">Lanzamientos</a>
+                <a href="mentorias.html" class="nav__link">Mentorías</a>
                 <a href="podcast.html" class="nav__link">Podcast</a>
-                <a href="imprensa.html" class="nav__link">Imprensa</a>
+                <a href="imprensa.html" class="nav__link">Prensa</a>
                 <a href="portugal.html" class="nav__link">Portugal</a>
-                <a href="#contato" class="btn btn--outline nav__cta">Contato</a>
+                <a href="#contato" class="btn btn--outline nav__cta">Contacto</a>
 
                 <!-- Language Selector -->
                 <div class="lang-select"
                     style="display:flex; gap:8px; margin-left:16px; font-weight:600; font-size:0.9rem;">
-                    <span style="color:#fff; opacity:1; cursor:default;">PT</span>
+                    <a href="../lancamentos.html"
+                        style="color:#fff; opacity:0.6; text-decoration:none; transition:opacity .2s;"
+                        onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">PT</a>
                     <span style="color:#fff; opacity:0.3;">|</span>
-                    <a href="en/lancamentos.html"
+                    <a href="../en/lancamentos.html"
                         style="color:#fff; opacity:0.6; text-decoration:none; transition:opacity .2s;"
                         onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">EN</a>
                     <span style="color:#fff; opacity:0.3;">|</span>
-                    <a href="es/lancamentos.html"
-                        style="color:#fff; opacity:0.6; text-decoration:none; transition:opacity .2s;"
-                        onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">ES</a>
+                    <span style="color:#fff; opacity:1; cursor:default;">ES</span>
                 </div>
             </nav>
         </div>
@@ -72,327 +73,348 @@
             <div class="hero__bg" aria-hidden="true"></div>
 
             <div class="container center reveal">
-                <div class="pill">Catálogo • Ficção • Não-ficção</div>
+                <div class="pill">Catálogo • Ficción • No ficción</div>
                 <h1 class="hero__title">
-                    Novas vozes da
-                    <span class="hero__title-accent">literatura contemporânea.</span>
+                    Nuevas voces de la
+                    <span class="hero__title-accent">literatura contemporánea.</span>
                 </h1>
                 <p class="hero__subtitle" style="margin-left:auto; margin-right:auto;">
-                    Conheça as obras que estamos levando para o mundo. Livros com propósito, design e identidade.
+                    Conozca las obras que estamos llevando al mundo. Libros con propósito, diseño e identidad.
                 </p>
             </div>
         </section>
 
-        <!-- DESTAQUES (Recent Releases) -->
+        <!-- HIGHLIGHTS (Recent Releases) -->
         <section class="section section--alt">
             <div class="container">
                 <div class="section__head reveal">
-                    <h2 class="section__title">Destaques da Editora</h2>
-                    <p class="section__subtitle">Os lançamentos mais recentes que estão dando o que falar.</p>
+                    <h2 class="section__title">Destacados de la Editorial</h2>
+                    <p class="section__subtitle">Los lanzamientos más recientes que están dando de qué hablar.</p>
                 </div>
 
                 <div class="book-grid vector-grid reveal">
-                    <!-- Livro 1 -->
+                    <!-- Book 1 -->
                     <article class="book-card">
                         <div class="book-cover" style="padding:0; background:transparent;">
-                            <img src="assets/img/cover-como-demitir.png" alt="Capa Como Demitir Seu Chefe"
+                            <img src="../assets/img/cover-como-demitir.png" alt="Portada Como Demitir Seu Chefe"
                                 style="width:100%; aspect-ratio:2/3; object-fit:cover; border-radius:8px; box-shadow:0 4px 15px rgba(0,0,0,0.5);">
                         </div>
                         <div class="book-info">
                             <h3 class="book-title">Como Demitir Seu Chefe</h3>
                             <p class="book-author">por Especialistas Stuchi</p>
-                            <p class="book-synopsis">Uma obra inspiradora que guia o leitor em direção à liberdade
-                                profissional, mostrando caminhos para repensar carreira.</p>
+                            <p class="book-synopsis">Una obra inspiradora que guía al lector hacia la libertad
+                                profesional,
+                                mostrando caminos para repensar la carrera.</p>
                             <p class="book-price" style="color:var(--accent); font-weight:bold; margin-bottom:10px;">Ver
-                                na Amazon</p>
+                                en
+                                Amazon</p>
                             <a href="https://www.amazon.com.br/Como-Demitir-Chefe-Editora-Stuchi-ebook/dp/B0CKCSCG2G"
                                 target="_blank" rel="noopener" class="btn btn--outline btn--sm btn--full">Solicitar
-                                informações</a>
+                                información</a>
                         </div>
                     </article>
 
-                    <!-- Livro 2 -->
+                    <!-- Book 2 -->
                     <article class="book-card">
                         <div class="book-cover" style="padding:0; background:transparent;">
-                            <img src="assets/img/cover-meu-sonho.png" alt="Capa Meu Sonho Chefe"
+                            <img src="../assets/img/cover-meu-sonho.png" alt="Portada Meu Sonho Chefe"
                                 style="width:100%; aspect-ratio:2/3; object-fit:cover; border-radius:8px; box-shadow:0 4px 15px rgba(0,0,0,0.5);">
                         </div>
                         <div class="book-info">
                             <h3 class="book-title">Meu Sonho Chefe</h3>
                             <p class="book-author">por Autores Stuchi</p>
-                            <p class="book-synopsis">Um livro motivacional que explora a jornada de realização
-                                profissional e pessoal, convidando o leitor a perseguir seus objetivos.</p>
+                            <p class="book-synopsis">Un libro motivacional que explora la jornada de realización
+                                profesional
+                                y personal, invitando al lector a perseguir sus objetivos.</p>
                             <p class="book-price" style="color:var(--accent); font-weight:bold; margin-bottom:10px;">Ver
-                                na Amazon</p>
+                                en
+                                Amazon</p>
                             <a href="https://www.amazon.com.br/Meu-Sonho-Chefe-Editora-Stuchi-ebook/dp/B0CD15FHZY"
                                 target="_blank" rel="noopener" class="btn btn--outline btn--sm btn--full">Solicitar
-                                informações</a>
+                                información</a>
                         </div>
                     </article>
 
-                    <!-- Livro 3 -->
+                    <!-- Book 3 -->
                     <article class="book-card">
                         <div class="book-cover" style="padding:0; background:transparent;">
-                            <img src="assets/img/cover-advogadas.png" alt="Capa Advogadas de Alta Performance"
+                            <img src="../assets/img/cover-advogadas.png" alt="Portada Advogadas de Alta Performance"
                                 style="width:100%; aspect-ratio:2/3; object-fit:cover; border-radius:8px; box-shadow:0 4px 15px rgba(0,0,0,0.5);">
                         </div>
                         <div class="book-info">
                             <h3 class="book-title">Advogadas de Alta Performance</h3>
-                            <p class="book-author">por Débora Brasil e coautoras</p>
-                            <p class="book-synopsis">Guia prático para mulheres na advocacia que buscam excelência e
-                                alta performance em suas carreiras jurídicas.</p>
+                            <p class="book-author">por Débora Brasil y coautoras</p>
+                            <p class="book-synopsis">Guía práctica para mujeres en la abogacía que buscan excelencia y
+                                alta
+                                performance en sus carreras jurídicas.</p>
                             <p class="book-price" style="color:var(--accent); font-weight:bold; margin-bottom:10px;">Ver
-                                na Amazon</p>
+                                en
+                                Amazon</p>
                             <a href="https://www.amazon.com.br/Advogadas-Alta-Perfomance-Debora-Brasil/dp/6598124042"
                                 target="_blank" rel="noopener" class="btn btn--outline btn--sm btn--full">Solicitar
-                                informações</a>
+                                información</a>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- CATÁLOGO GERAL -->
+        <!-- GENERAL CATALOG -->
         <section id="catalogo" class="section">
             <div class="container">
                 <div class="section__head reveal">
                     <h2 class="section__title">Catálogo Completo</h2>
-                    <!-- Filtros removidos temporariamente -->
+                    <!-- Filters - temporally removed -->
                 </div>
 
                 <div class="book-grid reveal" style="margin-top:40px;">
-                    <!-- Livro 4 -->
+                    <!-- Book 4 -->
                     <article class="book-card">
                         <div class="book-cover"
                             style="display:flex; justify-content:center; align-items:center; background:rgba(255,255,255,0.05);">
-                            <div style="font-size:1.5rem; font-weight:bold; letter-spacing:2px; opacity:0.3;">EM BREVE
+                            <div style="font-size:1.5rem; font-weight:bold; letter-spacing:2px; opacity:0.3;">
+                                PRÓXIMAMENTE
                             </div>
                         </div>
                         <div class="book-info">
                             <h3 class="book-title">Terapia em Dia</h3>
                             <p class="book-author">por Stuchi Editora</p>
-                            <p class="book-synopsis" style="font-size:0.9rem; margin-bottom:10px;">Projeto em
-                                desenvolvimento com lançamento previsto para 2026.</p>
-                            <span class="link" style="font-size:0.9rem; opacity:0.5; cursor:default;">Aguarde
-                                novidades</span>
+                            <p class="book-synopsis" style="font-size:0.9rem; margin-bottom:10px;">Proyecto en
+                                desarrollo
+                                con lanzamiento previsto para 2026.</p>
+                            <span class="link" style="font-size:0.9rem; opacity:0.5; cursor:default;">Espere
+                                novedades</span>
                         </div>
                     </article>
 
 
 
-                    <!-- Livro 8 -->
+                    <!-- Book 8 -->
                     <article class="book-card" data-category="tecnicos">
                         <div class="book-cover" style="padding:0; background:transparent;">
-                            <img src="assets/img/cover-entre-laudos.png" alt="Capa Entre Laudos e Afetos"
+                            <img src="../assets/img/cover-entre-laudos.png" alt="Portada Entre Laudos e Afetos"
                                 style="width:100%; aspect-ratio:2/3; object-fit:cover; border-radius:8px; box-shadow:0 4px 15px rgba(0,0,0,0.5);">
                         </div>
                         <div class="book-info">
                             <h3 class="book-title">Entre Laudos e Afetos</h3>
                             <p class="book-author" style="font-size:0.85rem;">por Lúcia Conde, Adriana Gonçalo, Tatiana
                                 Aguiar, Andresa Bianchini, Viviane Bastidi, Simone de Fátima</p>
-                            <p class="book-synopsis">Um retrato sensível e real do cotidiano das mães atípicas.</p>
+                            <p class="book-synopsis">Un retrato sensible y real de la vida cotidiana de las madres
+                                atípicas.
+                            </p>
                             <p class="book-price" style="color:var(--accent); font-weight:bold; margin-bottom:10px;">R$
                                 49,90</p>
                             <a href="https://www.livrariadabok2.com.br/entre-laudos-e-afeto-cotidiano-das-maes-atipicas"
                                 target="_blank" rel="noopener" class="btn btn--outline btn--sm btn--full">Comprar
-                                livro</a>
+                                libro</a>
                         </div>
                     </article>
 
-                    <!-- Livro Faça Acontecer -->
+                    <!-- Book Faça Acontecer -->
                     <article class="book-card">
                         <div class="book-cover" style="padding:0; background:transparent;">
-                            <img src="assets/img/cover-faca-acontecer.png" alt="Capa Faça Acontecer"
+                            <img src="../assets/img/cover-faca-acontecer.png" alt="Portada Faça Acontecer"
                                 style="width:100%; aspect-ratio:2/3; object-fit:cover; border-radius:8px; box-shadow:0 4px 15px rgba(0,0,0,0.5);">
                         </div>
                         <div class="book-info">
                             <h3 class="book-title">Faça Acontecer – Mulheres, Trabalho e o Desejo de Empreender</h3>
-                            <p class="book-synopsis">Livro que reúne relatos reais de oito mulheres empreendedoras,
-                                abordando coragem, superação, propósito, recomeços e a força do empreendedorismo
-                                feminino.</p>
+                            <p class="book-synopsis">Libro que reúne relatos reales de ocho mujeres emprendedoras,
+                                abordando
+                                coraje, superación, propósito, recomienzos y la fuerza del emprendimiento femenino.</p>
                             <a href="https://wa.me/5511969569809?text=Ol%C3%A1!%20Gostaria%20de%20saber%20se%20o%20livro%20Fa%C3%A7a%20Acontecer%20est%C3%A1%20dispon%C3%ADvel."
                                 target="_blank" rel="noopener" class="btn btn--outline btn--sm btn--full">Comprar
-                                livro</a>
+                                libro</a>
                         </div>
                     </article>
 
-                    <!-- Livro 12 Maneiras -->
+                    <!-- Book 12 Maneiras -->
                     <article class="book-card">
                         <div class="book-cover" style="padding:0; background:transparent;">
-                            <img src="assets/img/cover-12-maneiras.png" alt="Capa 12 Maneiras de Destravar a Sua Vida"
+                            <img src="../assets/img/cover-12-maneiras.png"
+                                alt="Portada 12 Maneiras de Destravar a Sua Vida"
                                 style="width:100%; aspect-ratio:2/3; object-fit:cover; border-radius:8px; box-shadow:0 4px 15px rgba(0,0,0,0.5);">
                         </div>
                         <div class="book-info">
                             <h3 class="book-title">12 Maneiras de Destravar a Sua Vida</h3>
-                            <p class="book-synopsis">Livro de desenvolvimento pessoal focado em libertação de bloqueios,
-                                mentalidade, disciplina, foco, autoconfiança e transformação pessoal. Estruturado em 12
-                                estratégias práticas para destravar áreas da vida.</p>
+                            <p class="book-synopsis">Libro de desarrollo personal enfocado en la liberación de bloqueos,
+                                mentalidad, disciplina, enfoque, autoconfianza y transformación personal. Estructurado
+                                en 12
+                                estrategias prácticas para desbloquear áreas de la vida.</p>
                             <a href="https://wa.me/5511969569809?text=Ol%C3%A1!%20Gostaria%20de%20saber%20se%20o%20livro%2012%20Maneiras%20de%20Destravar%20a%20Sua%20Vida%20est%C3%A1%20dispon%C3%ADvel."
                                 target="_blank" rel="noopener" class="btn btn--outline btn--sm btn--full">Comprar
-                                livro</a>
+                                libro</a>
                         </div>
                     </article>
 
-                    <!-- Livro 6 Caminhos -->
+                    <!-- Book 6 Caminhos -->
                     <article class="book-card">
                         <div class="book-cover" style="padding:0; background:transparent;">
-                            <img src="assets/img/cover-6-caminhos.png" alt="Capa 6 Caminhos e 1 Propósito"
+                            <img src="../assets/img/cover-6-caminhos.png" alt="Portada 6 Caminhos e 1 Propósito"
                                 style="width:100%; aspect-ratio:2/3; object-fit:cover; border-radius:8px; box-shadow:0 4px 15px rgba(0,0,0,0.5);">
                         </div>
                         <div class="book-info">
                             <h3 class="book-title">6 Caminhos e 1 Propósito – Desafiando o Empreendedorismo</h3>
-                            <p class="book-synopsis">Livro que retrata histórias reais de mulheres no empreendedorismo,
-                                abordando superação, coragem, determinação e construção de propósito. Compartilha
-                                experiências sobre desafios, resiliência e crescimento profissional.</p>
+                            <p class="book-synopsis">Libro que retrata historias reales de mujeres en el emprendimiento,
+                                abordando superación, coraje, determinación y construcción de propósito. Comparte
+                                experiencias sobre desafíos, resiliencia y crecimiento profesional.</p>
                             <a href="https://wa.me/5511969569809?text=Ol%C3%A1!%20Gostaria%20de%20saber%20se%20o%20livro%206%20Caminhos%20e%201%20Prop%C3%B3sito%20est%C3%A1%20dispon%C3%ADvel."
                                 target="_blank" rel="noopener" class="btn btn--outline btn--sm btn--full">Comprar
-                                livro</a>
+                                libro</a>
                         </div>
                     </article>
                 </div>
                 </article>
 
-                <!-- Livro Bíblia do Líder -->
+                <!-- Book Bíblia do Líder -->
                 <article class="book-card">
                     <div class="book-cover"
                         style="display:flex; justify-content:center; align-items:center; background:rgba(255,255,255,0.05);">
-                        <div style="font-size:1.5rem; font-weight:bold; letter-spacing:2px; opacity:0.3;">EM BREVE
+                        <div style="font-size:1.5rem; font-weight:bold; letter-spacing:2px; opacity:0.3;">PRÓXIMAMENTE
                         </div>
                     </div>
                     <div class="book-info">
                         <h3 class="book-title">Bíblia do Líder</h3>
                         <p class="book-author">por Stuchi Editora</p>
-                        <p class="book-synopsis" style="font-size:0.9rem; margin-bottom:10px;">Projeto em
-                            desenvolvimento com lançamento previsto para 2026.</p>
-                        <span class="link" style="font-size:0.9rem; opacity:0.5; cursor:default;">Aguarde
-                            novidades</span>
+                        <p class="book-synopsis" style="font-size:0.9rem; margin-bottom:10px;">Proyecto en desarrollo
+                            con
+                            lanzamiento previsto para 2026.</p>
+                        <span class="link" style="font-size:0.9rem; opacity:0.5; cursor:default;">Espere
+                            novedades</span>
                     </div>
                 </article>
 
-                <!-- Livro 12 Maneiras de Destravar a Sua Vida – 2ª Edição -->
+                <!-- Book 12 Maneiras de Destravar a Sua Vida – 2ª Edição -->
                 <article class="book-card">
                     <div class="book-cover"
                         style="display:flex; justify-content:center; align-items:center; background:rgba(255,255,255,0.05);">
-                        <div style="font-size:1.5rem; font-weight:bold; letter-spacing:2px; opacity:0.3;">EM BREVE
+                        <div style="font-size:1.5rem; font-weight:bold; letter-spacing:2px; opacity:0.3;">PRÓXIMAMENTE
                         </div>
                     </div>
                     <div class="book-info">
                         <h3 class="book-title">12 Maneiras de Destravar a Sua Vida – 2ª Edição</h3>
                         <p class="book-author">por Stuchi Editora</p>
-                        <p class="book-synopsis" style="font-size:0.9rem; margin-bottom:10px;">Projeto em
-                            desenvolvimento com lançamento previsto para 2026.</p>
-                        <span class="link" style="font-size:0.9rem; opacity:0.5; cursor:default;">Aguarde
-                            novidades</span>
+                        <p class="book-synopsis" style="font-size:0.9rem; margin-bottom:10px;">Proyecto en desarrollo
+                            con
+                            lanzamiento previsto para 2026.</p>
+                        <span class="link" style="font-size:0.9rem; opacity:0.5; cursor:default;">Espere
+                            novedades</span>
                     </div>
                 </article>
 
-                <!-- Livro Como Ter um Relacionamento Saudável -->
+                <!-- Book Como Ter um Relacionamento Saudável -->
                 <article class="book-card">
                     <div class="book-cover"
                         style="display:flex; justify-content:center; align-items:center; background:rgba(255,255,255,0.05);">
-                        <div style="font-size:1.5rem; font-weight:bold; letter-spacing:2px; opacity:0.3;">EM BREVE
+                        <div style="font-size:1.5rem; font-weight:bold; letter-spacing:2px; opacity:0.3;">PRÓXIMAMENTE
                         </div>
                     </div>
                     <div class="book-info">
                         <h3 class="book-title">Como Ter um Relacionamento Saudável</h3>
                         <p class="book-author">por Stuchi Editora</p>
-                        <p class="book-synopsis" style="font-size:0.9rem; margin-bottom:10px;">Projeto em
-                            desenvolvimento com lançamento previsto para 2026.</p>
-                        <span class="link" style="font-size:0.9rem; opacity:0.5; cursor:default;">Aguarde
-                            novidades</span>
+                        <p class="book-synopsis" style="font-size:0.9rem; margin-bottom:10px;">Proyecto en desarrollo
+                            con
+                            lanzamiento previsto para 2026.</p>
+                        <span class="link" style="font-size:0.9rem; opacity:0.5; cursor:default;">Espere
+                            novedades</span>
                     </div>
                 </article>
 
-                <!-- Livro Como Venci a Depressão e o Desejo do Suicídio -->
+                <!-- Book Como Venci a Depressão e o Desejo do Suicídio -->
                 <article class="book-card">
                     <div class="book-cover"
                         style="display:flex; justify-content:center; align-items:center; background:rgba(255,255,255,0.05);">
-                        <div style="font-size:1.5rem; font-weight:bold; letter-spacing:2px; opacity:0.3;">EM BREVE
+                        <div style="font-size:1.5rem; font-weight:bold; letter-spacing:2px; opacity:0.3;">PRÓXIMAMENTE
                         </div>
                     </div>
                     <div class="book-info">
                         <h3 class="book-title">Como Venci a Depressão e o Desejo do Suicídio</h3>
                         <p class="book-author">por Stuchi Editora</p>
-                        <p class="book-synopsis" style="font-size:0.9rem; margin-bottom:10px;">Projeto em
-                            desenvolvimento com lançamento previsto para 2026.</p>
-                        <span class="link" style="font-size:0.9rem; opacity:0.5; cursor:default;">Aguarde
-                            novidades</span>
+                        <p class="book-synopsis" style="font-size:0.9rem; margin-bottom:10px;">Proyecto en desarrollo
+                            con
+                            lanzamiento previsto para 2026.</p>
+                        <span class="link" style="font-size:0.9rem; opacity:0.5; cursor:default;">Espere
+                            novedades</span>
                     </div>
                 </article>
 
-                <!-- Livro Desmitificando a Liderança na Educação -->
+                <!-- Book Desmitificando a Liderança na Educação -->
                 <article class="book-card">
                     <div class="book-cover"
                         style="display:flex; justify-content:center; align-items:center; background:rgba(255,255,255,0.05);">
-                        <div style="font-size:1.5rem; font-weight:bold; letter-spacing:2px; opacity:0.3;">EM BREVE
+                        <div style="font-size:1.5rem; font-weight:bold; letter-spacing:2px; opacity:0.3;">PRÓXIMAMENTE
                         </div>
                     </div>
                     <div class="book-info">
                         <h3 class="book-title">Desmitificando a Liderança na Educação</h3>
                         <p class="book-author">por Stuchi Editora</p>
-                        <p class="book-synopsis" style="font-size:0.9rem; margin-bottom:10px;">Projeto em
-                            desenvolvimento com lançamento previsto para 2026.</p>
-                        <span class="link" style="font-size:0.9rem; opacity:0.5; cursor:default;">Aguarde
-                            novidades</span>
+                        <p class="book-synopsis" style="font-size:0.9rem; margin-bottom:10px;">Proyecto en desarrollo
+                            con
+                            lanzamiento previsto para 2026.</p>
+                        <span class="link" style="font-size:0.9rem; opacity:0.5; cursor:default;">Espere
+                            novedades</span>
                     </div>
                 </article>
 
-                <!-- Livro Bíblia do Corretor de Imovel -->
+                <!-- Book Bíblia do Corretor de Imovel -->
                 <article class="book-card">
                     <div class="book-cover"
                         style="display:flex; justify-content:center; align-items:center; background:rgba(255,255,255,0.05);">
-                        <div style="font-size:1.5rem; font-weight:bold; letter-spacing:2px; opacity:0.3;">EM BREVE
+                        <div style="font-size:1.5rem; font-weight:bold; letter-spacing:2px; opacity:0.3;">PRÓXIMAMENTE
                         </div>
                     </div>
                     <div class="book-info">
                         <h3 class="book-title">Bíblia do Corretor de Imóvel</h3>
                         <p class="book-author">por Stuchi Editora</p>
-                        <p class="book-synopsis" style="font-size:0.9rem; margin-bottom:10px;">Projeto em
-                            desenvolvimento com lançamento previsto para 2026.</p>
-                        <span class="link" style="font-size:0.9rem; opacity:0.5; cursor:default;">Aguarde
-                            novidades</span>
+                        <p class="book-synopsis" style="font-size:0.9rem; margin-bottom:10px;">Proyecto en desarrollo
+                            con
+                            lanzamiento previsto para 2026.</p>
+                        <span class="link" style="font-size:0.9rem; opacity:0.5; cursor:default;">Espere
+                            novedades</span>
                     </div>
                 </article>
             </div>
             </div>
         </section>
 
-        <!-- EM BREVE -->
+        <!-- COMING SOON -->
         <section class="section section--alt">
             <div class="container">
                 <div class="cta__box reveal">
                     <div>
-                        <span class="pill" style="margin-bottom:12px; background:rgba(255,255,255,0.1);">Em breve</span>
+                        <span class="pill"
+                            style="margin-bottom:12px; background:rgba(255,255,255,0.1);">Próximamente</span>
                         <h3>Antologia: Vozes do Futuro</h3>
-                        <p>Uma coletânea sci-fi com 15 autores selecionados em nosso último concurso literário.</p>
-                        <p style="margin-top:10px; font-size:0.9rem; color:var(--muted2);">Pré-venda disponível a partir
-                            de Novembro/2026.</p>
+                        <p>Una colección de ciencia ficción con 15 autores seleccionados en nuestro último concurso
+                            literario.</p>
+                        <p style="margin-top:10px; font-size:0.9rem; color:var(--muted2);">Preventa disponible a partir
+                            de
+                            Noviembre/2026.</p>
                     </div>
-                    <a href="#contato" class="btn btn--outline">Entrar na lista de espera</a>
+                    <a href="#contato" class="btn btn--outline">Entrar en la lista de espera</a>
                 </div>
             </div>
         </section>
 
-        <!-- INSTITUCIONAL / CTA -->
+        <!-- INSTITUTIONAL / CTA -->
         <section class="section">
             <div class="container center reveal">
-                <h2 class="section__title" style="font-size:1.8rem; margin-bottom:18px;">Seu livro merece esse cuidado
+                <h2 class="section__title" style="font-size:1.8rem; margin-bottom:18px;">Su libro merece este cuidado
                 </h2>
                 <p class="section__subtitle" style="margin-bottom:30px;">
-                    Da preparação do texto ao design da capa, tratamos cada obra como única.
-                    Quer ver seu livro em nosso catálogo?
+                    Desde la preparación del texto hasta el diseño de la portada, tratamos cada obra como única.
+                    ¿Quiere ver su libro en nuestro catálogo?
                 </p>
-                <a href="publique-conosco.html" class="btn btn--solid">Quero publicar meu livro</a>
+                <a href="publique-conosco.html" class="btn btn--solid">Quiero publicar mi libro</a>
             </div>
         </section>
 
-        <!-- CONTATO -->
+        <!-- CONTACT -->
         <section id="contato" class="section section--alt">
             <div class="container">
                 <div class="contact reveal">
                     <div class="contact__head">
-                        <h2 class="section__title">Contato</h2>
-                        <p class="section__subtitle">Escolha o canal que preferir.</p>
+                        <h2 class="section__title">Contacto</h2>
+                        <p class="section__subtitle">Elija el canal que prefiera.</p>
                     </div>
 
                     <div class="contact__grid">
@@ -400,7 +422,7 @@
                             <div class="contact__icon">💬</div>
                             <div>
                                 <h3>WhatsApp</h3>
-                                <p class="muted">Resposta rápida</p>
+                                <p class="muted">Respuesta rápida</p>
                             </div>
                             <span class="contact__arrow">→</span>
                         </a>
@@ -411,7 +433,7 @@
                             <div class="contact__icon">✉️</div>
                             <div>
                                 <h3>E-mail</h3>
-                                <p class="muted">Contato formal</p>
+                                <p class="muted">Contacto formal</p>
                             </div>
                             <span class="contact__arrow">→</span>
                         </a>
@@ -421,7 +443,7 @@
                             <div class="contact__icon">📷</div>
                             <div>
                                 <h3>Instagram</h3>
-                                <p class="muted">Siga nosso perfil</p>
+                                <p class="muted">Siga nuestro perfil</p>
                             </div>
                             <span class="contact__arrow">→</span>
                         </a>
@@ -432,13 +454,13 @@
 
         <footer class="footer">
             <div class="container footer__inner">
-                <p>© 2026 Stuchi Editora — Formando novos autores.</p>
-                <button class="link link--btn" id="backToTop" type="button">Voltar ao topo ↑</button>
+                <p>© 2026 Stuchi Editora — Formando nuevos autores.</p>
+                <button class="link link--btn" id="backToTop" type="button">Volver arriba ↑</button>
             </div>
         </footer>
     </main>
 
-    <script src="assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 
 </html>
