@@ -97,7 +97,76 @@ if (backToTop) {
     const href = (a.getAttribute("href") || "").toLowerCase();
     if (!href) return;
 
-    // marca página atual
+    // mark active page
     if (href === path) a.classList.add("is-active");
   });
 })();
+
+// ===== Cookie Banner =====
+document.addEventListener("DOMContentLoaded", () => {
+  const cookieConsent = localStorage.getItem("stuchi_cookies_accepted");
+  if (!cookieConsent) {
+    const banner = document.createElement("div");
+    banner.className = "cookie-banner";
+
+    // Adjust translations based on language
+    let bannerText = "Utilizamos cookies para melhorar sua experiência. Ao continuar, você concorda com nossa <a href='/privacidade.html'>Política de Privacidade</a>.";
+    let btnText = "Aceitar e Fechar";
+
+    if (window.location.pathname.includes('/en/')) {
+      bannerText = "We use cookies to enhance your experience. By continuing, you agree to our <a href='/privacidade.html'>Privacy Policy</a>.";
+      btnText = "Accept & Close";
+    } else if (window.location.pathname.includes('/es/')) {
+      bannerText = "Usamos cookies para mejorar su experiencia. Al continuar, acepta nuestra <a href='/privacidade.html'>Política de Privacidad</a>.";
+      btnText = "Aceptar y Cerrar";
+    }
+
+    banner.innerHTML = `
+      <div class="cookie-text">
+        ${bannerText}
+      </div>
+      <button id="acceptCookies" class="btn btn--outline btn--sm">${btnText}</button>
+    `;
+
+    document.body.appendChild(banner);
+
+    // Small delay for smooth animation
+    setTimeout(() => {
+      banner.classList.add("is-visible");
+    }, 100);
+
+    document.getElementById("acceptCookies").addEventListener("click", () => {
+      localStorage.setItem("stuchi_cookies_accepted", "true");
+      banner.classList.remove("is-visible");
+      setTimeout(() => {
+        banner.remove();
+      }, 400); // Wait for transition
+    });
+  }
+});
+
+// ===== FAQ Accordion =====
+const faqItems = document.querySelectorAll(".faq-item");
+faqItems.forEach(item => {
+  const question = item.querySelector(".faq-question");
+  const answer = item.querySelector(".faq-answer");
+
+  if (question && answer) {
+    question.addEventListener("click", () => {
+      const isOpen = item.classList.contains("is-open");
+
+      // Close all other items
+      faqItems.forEach(otherItem => {
+        otherItem.classList.remove("is-open");
+        const otherAnswer = otherItem.querySelector(".faq-answer");
+        if (otherAnswer) otherAnswer.style.maxHeight = null;
+      });
+
+      // Toggle current item
+      if (!isOpen) {
+        item.classList.add("is-open");
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      }
+    });
+  }
+});
