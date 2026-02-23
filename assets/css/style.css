@@ -228,7 +228,8 @@ a {
 }
 
 .btn--solid:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.15);
   opacity: .95
 }
 
@@ -240,7 +241,9 @@ a {
 
 .btn--outline:hover {
   background: #fff;
-  color: #000
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.15);
 }
 
 .btn--full {
@@ -889,8 +892,8 @@ a {
 }
 
 .book-card:hover .book-cover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 24px rgba(0, 0, 0, .4);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 32px rgba(255, 255, 255, 0.05), 0 14px 24px rgba(0, 0, 0, .5);
 }
 
 .book-badge {
