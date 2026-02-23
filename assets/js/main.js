@@ -104,28 +104,44 @@ if (backToTop) {
 
 // ===== Cookie Banner =====
 document.addEventListener("DOMContentLoaded", () => {
-  const cookieConsent = localStorage.getItem("stuchi_cookies_accepted");
-  if (!cookieConsent) {
+  const consent = localStorage.getItem("cookie_consent");
+  const consentTime = localStorage.getItem("cookie_consent_time");
+  
+  // Check if 6 months have passed (roughly 180 days)
+  const isExpired = consentTime && (Date.now() - parseInt(consentTime, 10)) > 1000 * 60 * 60 * 24 * 180;
+  
+  if (!consent || isExpired) {
+    if (isExpired) {
+      localStorage.removeItem("cookie_consent");
+      localStorage.removeItem("cookie_consent_time");
+    }
+
     const banner = document.createElement("div");
     banner.className = "cookie-banner";
 
     // Adjust translations based on language
-    let bannerText = "Utilizamos cookies para melhorar sua experiência. Ao continuar, você concorda com nossa <a href='/privacidade.html'>Política de Privacidade</a>.";
-    let btnText = "Aceitar e Fechar";
+    let bannerText = "Utilizamos cookies para melhorar sua experiência. Ao continuar, você concorda com nossa <a href='./politica-de-privacidade.html'>Política de Privacidade</a>.";
+    let btnAcceptText = "Aceitar";
+    let btnCloseText = "Fechar";
 
     if (window.location.pathname.includes('/en/')) {
-      bannerText = "We use cookies to enhance your experience. By continuing, you agree to our <a href='/privacidade.html'>Privacy Policy</a>.";
-      btnText = "Accept & Close";
+      bannerText = "We use cookies to improve your experience. By continuing, you agree to our <a href='./privacy-policy.html'>Privacy Policy</a>.";
+      btnAcceptText = "Accept";
+      btnCloseText = "Close";
     } else if (window.location.pathname.includes('/es/')) {
-      bannerText = "Usamos cookies para mejorar su experiencia. Al continuar, acepta nuestra <a href='/privacidade.html'>Política de Privacidad</a>.";
-      btnText = "Aceptar y Cerrar";
+      bannerText = "Usamos cookies para mejorar tu experiencia. Al continuar, aceptas nuestra <a href='./politica-de-privacidad.html'>Política de Privacidad</a>.";
+      btnAcceptText = "Aceptar";
+      btnCloseText = "Cerrar";
     }
 
     banner.innerHTML = `
       <div class="cookie-text">
         ${bannerText}
       </div>
-      <button id="acceptCookies" class="btn btn--outline btn--sm">${btnText}</button>
+      <div class="cookie-actions">
+        <button id="acceptCookies" class="btn btn--sm">${btnAcceptText}</button>
+        <button id="closeCookies" class="btn btn--outline btn--sm">${btnCloseText}</button>
+      </div>
     `;
 
     document.body.appendChild(banner);
@@ -135,13 +151,17 @@ document.addEventListener("DOMContentLoaded", () => {
       banner.classList.add("is-visible");
     }, 100);
 
-    document.getElementById("acceptCookies").addEventListener("click", () => {
-      localStorage.setItem("stuchi_cookies_accepted", "true");
+    const handleConsent = (status) => {
+      localStorage.setItem("cookie_consent", status);
+      localStorage.setItem("cookie_consent_time", Date.now().toString());
       banner.classList.remove("is-visible");
       setTimeout(() => {
         banner.remove();
-      }, 400); // Wait for transition
-    });
+      }, 500); // Wait for transition
+    };
+
+    document.getElementById("acceptCookies").addEventListener("click", () => handleConsent("accepted"));
+    document.getElementById("closeCookies").addEventListener("click", () => handleConsent("dismissed"));
   }
 });
 
