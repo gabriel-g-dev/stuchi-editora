@@ -71,14 +71,16 @@
 
     <main>
         <!-- HERO -->
-        <section class="hero pb-0">
+        <section class="hero"
+            style="min-height: 50vh; padding-top: 160px; padding-bottom: 40px; display: flex; align-items: center;">
             <div class="hero__bg" aria-hidden="true" style="opacity: 0.2"></div>
             <div class="container hero__grid"
-                style="grid-template-columns: 1fr; text-align: center; max-width: 800px; padding-bottom: 24px;">
-                <div class="hero__copy reveal">
+                style="grid-template-columns: 1fr; text-align: center; max-width: 800px; margin: 0 auto;">
+                <div class="hero__copy reveal"
+                    style="max-width: 650px; margin: 0 auto; word-break: normal; overflow-wrap: break-word;">
                     <div class="pill" style="margin: 0 auto 16px;">Transparencia</div>
                     <h1 class="hero__title">Política de <span class="hero__title-accent">Privacidad</span></h1>
-                    <p class="hero__subtitle">
+                    <p class="hero__subtitle" style="line-height: 1.6; margin-top: 16px;">
                         Respetamos tu privacidad y la seguridad de tus datos. Entiende cómo tratamos tu información.
                     </p>
                 </div>
@@ -130,8 +132,7 @@
                         comuníquese con nosotros por correo electrónico a <strong>Contatos@stuchieditora.com</strong>.
                     </p>
 
-                    <p style="margin-top: 48px; font-size: 0.9rem; color: var(--muted2);">Última actualización: 23 de
-                        febrero de 2026.</p>
+
                 </div>
             </div>
         </section>
@@ -139,8 +140,11 @@
 
     <footer class="footer">
         <div class="container footer__inner">
-            <p> 2026 Stuchi Editora  Todos los derechos reservados.</p>
-            <a href="politica-de-privacidad.html" style="color:var(--muted2); text-decoration:none; font-size:0.9rem; border-bottom:1px solid transparent; transition:0.3s;" onmouseover="this.style.borderBottom='1px solid var(--muted2)'" onmouseout="this.style.borderBottom='1px solid transparent'">Política de Privacidad</a>
+            <p>© 2026 Stuchi Editora — Todos los derechos reservados.</p>
+            <a href="politica-de-privacidad.html"
+                style="color:var(--muted2); text-decoration:none; font-size:0.9rem; border-bottom:1px solid transparent; transition:0.3s;"
+                onmouseover="this.style.borderBottom='1px solid var(--muted2)'"
+                onmouseout="this.style.borderBottom='1px solid transparent'">Política de Privacidad</a>
             <button class="link link--btn" id="backToTop" type="button">Volver arriba ↑</button>
         </div>
     </footer>
@@ -149,4 +153,3 @@
 </body>
 
 </html>
-
