@@ -944,8 +944,8 @@ a {
   color: var(--muted2);
   margin-bottom: 16px;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
   flex: 1;
