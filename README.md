@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/img/stuchi-logo.png" alt="Stuchi Editora Logo" width="180"/>
+  <img src="assets/img/logo-stuchi.png" alt="Stuchi Editora Logo" width="180"/>
   <h1>Stuchi Editora</h1>
   <p>Static Frontend and NestJS API for a literary publishing platform.</p>
 </div>
@@ -76,4 +76,6 @@ npx serve .
 python -m http.server 8000
 ```
 
-*Developed by [Gabriel-hub-prog22](https://github.com/Gabriel-hub-prog22).*
+*Developed by [gabriel-g-dev](https://github.com/gabriel-g-dev).*
+
+> **Live Production Site:** [Stuchi Editora](https://gabriel-g-dev.github.io/stuchi-editora/)
