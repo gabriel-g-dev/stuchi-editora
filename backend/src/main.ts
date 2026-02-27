@@ -6,15 +6,11 @@ async function bootstrap() {
   const logger = new Logger('Bootstrap');
   try {
     const app = await NestFactory.create(AppModule);
-
-    // CORS Configuration
     app.enableCors({
       origin: '*',
       methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
       credentials: true,
     });
-
-    // Global Validation Pipe
     app.useGlobalPipes(
       new ValidationPipe({
         whitelist: true,
@@ -22,8 +18,6 @@ async function bootstrap() {
         transform: true,
       }),
     );
-
-    // Graceful shutdown
     app.enableShutdownHooks();
 
     const port = process.env.PORT || 3000;

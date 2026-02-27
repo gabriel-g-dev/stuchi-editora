@@ -8,8 +8,8 @@ POST {{baseUrl}}/auth/login
 Content-Type: application/json
 
 {
-    "email": "admin@stuchieditora.com",
-    "password": "Admin@12345"
+    "email": "user@example.com",
+    "password": "YOUR_PASSWORD_HERE"
 }
 
 ### Variavel Token

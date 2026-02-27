@@ -18,7 +18,7 @@
     <meta property="og:locale" content="en_US" />
     <meta name="theme-color" content="#0b0b0d" />
 
-    <!-- Fonts -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -98,10 +98,10 @@
 </head>
 
 <body>
-    <!-- Anchor top -->
+    
     <div id="top"></div>
 
-    <!-- Progress bar -->
+    
     <div class="progress" aria-hidden="true">
         <div class="progress__bar" id="progressBar"></div>
     </div>
@@ -126,7 +126,7 @@
                 <a href="portugal.html" class="nav__link">Portugal</a>
                 <a href="#contato" class="btn btn--outline nav__cta">Contact</a>
 
-                <!-- Language Selector -->
+                
                 <div class="lang-select" role="group" aria-label="Language selector"
                     style="display:flex; gap:8px; margin-left:16px; font-weight:600; font-size:0.9rem;">
                     <a href="../publique-conosco.html"
@@ -144,7 +144,7 @@
     </header>
 
     <main>
-        <!-- HERO -->
+        
         <section class="hero">
             <div class="hero__bg" aria-hidden="true"></div>
 
@@ -167,7 +167,7 @@
                     </div>
                 </div>
 
-                <!-- Frame illustrative / Visual highlight -->
+                
                 <div class="hero__frame reveal">
                     <div class="frame">
                         <div class="frame__top">
@@ -195,7 +195,7 @@
             </div>
         </section>
 
-        <!-- CONCEPT / WHY STUCHI -->
+        
         <div class="container" id="selecao">
             <div class="hero__grid" style="align-items:start; gap:40px;">
                 <div>
@@ -227,7 +227,7 @@
             </div>
         </div>
 
-        <!-- EDITORIAL PROCESS -->
+        
         <section id="processo" class="section">
             <div class="container">
                 <div class="section__head reveal">
@@ -255,7 +255,7 @@
             </div>
         </section>
 
-        <!-- FAQ (FREQUENTLY ASKED QUESTIONS) -->
+        
         <section class="section">
             <div class="container">
                 <div class="section__head reveal">
@@ -314,7 +314,7 @@
             </div>
         </section>
 
-        <!-- VALUE / CURATION -->
+        
         <section class="section section--alt">
             <div class="container center reveal">
                 <div style="max-width:700px; margin:0 auto;">
@@ -330,7 +330,7 @@
             </div>
         </section>
 
-        <!-- FORM / FINAL CTA -->
+        
         <section id="formulario" class="section">
             <div class="container">
                 <div class="cta__box reveal form-box" style="background:#000; border:1px solid rgba(255,255,255,0.1);">
@@ -339,7 +339,7 @@
                         <p class="section__subtitle">Tell us about yourself and your project.</p>
                     </div>
 
-                    <!-- Submission Form via API (WhatsApp) -->
+                    
                     <form id="formPublicacao" class="form">
                         <div class="form__group">
                             <label for="nome" class="form__label">Full Name</label>
@@ -388,7 +388,7 @@
             </div>
         </section>
 
-        <!-- CONTACT -->
+        
         <section id="contato" class="section section--alt">
             <div class="container">
                 <div class="contact reveal">
@@ -451,7 +451,7 @@
     </main>
 
     <script src="../assets/js/main.js"></script>
-    <!-- Enhanced UX Styles -->
+    
     <style>
         .input-error {
             border-color: #ff4444 !important;
@@ -590,33 +590,22 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Constants
             const WHATSAPP_NUMBER = "5511969569809";
             const MIN_PITCH_LENGTH = 10;
             const MAX_PITCH_LENGTH = 500;
-
-            // DOM Elements
             const form = document.getElementById("formPublicacao");
             const submitBtn = form.querySelector('button[type="submit"]');
             const generoSelect = document.getElementById('genero');
             const outroContainer = document.getElementById('outro_container');
             const outroInput = document.getElementById('outro');
             const pitchInput = document.getElementById('pitch');
-
-            // Feedback Container
             const feedbackBox = document.createElement("div");
             feedbackBox.className = "form-feedback-box";
             form.appendChild(feedbackBox);
-
-            // Character Counter
             const charCounter = document.createElement("span");
             charCounter.className = "char-counter";
             charCounter.innerText = `0 / ${MAX_PITCH_LENGTH}`;
             pitchInput.parentNode.appendChild(charCounter);
-
-            // --- UI Logic and Interaction ---
-
-            // Update character counter
             pitchInput.addEventListener("input", function () {
                 const length = this.value.length;
                 charCounter.innerText = `${length} / ${MAX_PITCH_LENGTH}`;
@@ -627,15 +616,11 @@
                 } else if (length >= MAX_PITCH_LENGTH * 0.9) {
                     charCounter.classList.add("limit-near");
                 }
-
-                // Limit characters manually if maxlength doesn't work
                 if (length > MAX_PITCH_LENGTH) {
                     this.value = this.value.substring(0, MAX_PITCH_LENGTH);
                     charCounter.innerText = `${MAX_PITCH_LENGTH} / ${MAX_PITCH_LENGTH}`;
                 }
             });
-
-            // Toggle "Other" field
             generoSelect.addEventListener('change', function () {
                 const isOutro = this.value === 'Outro';
                 outroContainer.style.display = isOutro ? 'block' : 'none';
@@ -645,25 +630,19 @@
                     outroInput.value = '';
                     removeError(outroInput);
                 } else {
-                    // Smooth animation
                     outroContainer.style.opacity = 0;
                     setTimeout(() => outroContainer.style.opacity = 1, 10);
                     outroContainer.style.transition = "opacity 0.3s ease";
                     outroInput.focus();
                 }
             });
-
-            // Clear errors on typing
             form.querySelectorAll("input, textarea, select").forEach(input => {
                 input.addEventListener("input", () => removeError(input));
                 input.addEventListener("change", () => removeError(input));
             });
 
-            // --- Helper Functions ---
-
             function showError(input, message) {
                 const parent = input.parentElement;
-                // Avoid duplicate messages
                 if (parent.querySelector(".error-message")) return;
 
                 input.classList.add("input-error");
@@ -685,23 +664,15 @@
                 return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
             }
 
-            // --- Submit Handler ---
-
             form.addEventListener("submit", function (e) {
                 e.preventDefault();
-
-                // 1. Reset UI
                 feedbackBox.style.display = "none";
                 feedbackBox.innerHTML = "";
                 feedbackBox.className = "form-feedback-box";
                 document.querySelectorAll(".error-message").forEach(el => el.remove());
                 document.querySelectorAll(".input-error").forEach(el => el.classList.remove("input-error"));
-
-                // 2. Validation
                 let hasError = false;
                 let firstErrorInput = null;
-
-                // Validate General Required Fields
                 const inputs = form.querySelectorAll("[required]");
                 inputs.forEach(input => {
                     if (!input.value.trim()) {
@@ -710,23 +681,17 @@
                         if (!firstErrorInput) firstErrorInput = input;
                     }
                 });
-
-                // Validate Email
                 const emailInput = document.getElementById("email");
                 if (emailInput.value.trim() && !validateEmail(emailInput.value)) {
                     showError(emailInput, "Please enter a valid email.");
                     hasError = true;
                     if (!firstErrorInput) firstErrorInput = emailInput;
                 }
-
-                // Validate Pitch (Minimum characters)
                 if (pitchInput.value.trim().length < MIN_PITCH_LENGTH) {
                     showError(pitchInput, `Please describe a bit more (minimum ${MIN_PITCH_LENGTH} characters).`);
                     hasError = true;
                     if (!firstErrorInput) firstErrorInput = pitchInput;
                 }
-
-                // If error, stop and focus
                 if (hasError) {
                     if (firstErrorInput) {
                         firstErrorInput.focus();
@@ -734,14 +699,10 @@
                     }
                     return;
                 }
-
-                // 3. Preparation for Sending
                 const originalText = submitBtn.innerText;
                 submitBtn.classList.add("btn--loading");
                 submitBtn.innerText = "Opening WhatsApp...";
                 submitBtn.disabled = true;
-
-                // Collect Data
                 const nome = document.getElementById("nome").value.trim();
                 const email = document.getElementById("email").value.trim();
                 let genero = document.getElementById("genero").value;
@@ -750,8 +711,6 @@
                 if (genero === 'Outro') {
                     genero = outroInput.value.trim();
                 }
-
-                // Formatting Message (Headers in English for consistency/sender, Content from form)
                 const message = `New editorial submission
 
 Name: ${nome}
@@ -761,8 +720,6 @@ Book Pitch:
 ${pitch}`;
 
                 const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-
-                // 4. WhatsApp Open with Delay (UX)
                 setTimeout(() => {
                     let windowOpened = false;
 
@@ -777,17 +734,13 @@ ${pitch}`;
 
                     submitBtn.classList.remove("btn--loading");
                     submitBtn.innerText = "Sent!";
-
-                    // 5. Intelligent Feedback
                     if (windowOpened) {
-                        // Auto Success
                         feedbackBox.innerHTML = `
                             <strong>Your WhatsApp app has been opened.</strong><br>
                             Finalize sending the message to complete your submission.
                         `;
                         feedbackBox.classList.add("feedback-success");
                     } else {
-                        // Popup Blocked - Manual Fallback
                         feedbackBox.innerHTML = `
                             <strong>The popup was blocked.</strong><br>
                             Click below to open WhatsApp manually:<br>
@@ -797,8 +750,6 @@ ${pitch}`;
                     }
                     feedbackBox.style.display = "block";
                     feedbackBox.scrollIntoView({ behavior: "smooth", block: "center" });
-
-                    // Resetar formulário após sucesso (mas manter feedback visível por um tempo)
                     if (windowOpened) {
                         setTimeout(() => {
                             form.reset();
@@ -807,7 +758,6 @@ ${pitch}`;
                             submitBtn.innerText = originalText;
                         }, 5000);
                     } else {
-                        // Se houve fallback, reabilitar botão mais rápido
                         submitBtn.disabled = false;
                         submitBtn.innerText = originalText;
                     }
