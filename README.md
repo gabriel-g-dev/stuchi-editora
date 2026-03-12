@@ -1,81 +1,78 @@
 <div align="center">
-  <img src="assets/img/logo-stuchi.png" alt="Stuchi Editora Logo" width="180"/>
+  <img src="assets/img/logo-stuchi.png" alt="Stuchi Editora Logo" width="160"/>
   <h1>Stuchi Editora</h1>
-  <p>Static Frontend and NestJS API for a literary publishing platform.</p>
+  <p><strong>Transformando Autores e Histórias</strong></p>
+  <p>Plataforma editorial híbrida integrada: Frontend institucional e API NestJS para gestão de originais.</p>
 </div>
 
 ---
 
-## Overview
+## 📚 O Projeto
 
-Stuchi Editora is a hybrid platform handling institutional content and author manuscript submissions. It uses a decoupled architecture to maintain a fast, static frontend while properly securing backend operations.
+A **Stuchi Editora** é um projeto de site institucional desenvolvido para apresentar uma editora e organizar o processo de envio de originais por novos autores. Este repositório reúne o frontend institucional e a API utilizada para gerenciar envios de manuscritos e conteúdo do site.
 
-The client-side is purely static (HTML/CSS/JS) to maximize loading speed and SEO ranking, hosted directly from the repository. The backend is a NestJS REST API that handles dynamic data (books, press releases, podcasts) and secure manuscript submissions.
+### Diferenciais da Implementação
+- **Performance:** Frontend em HTML/JS puro para carregamento instantâneo e SEO otimizado.
+- **Escalabilidade:** Backend em NestJS organizado em módulos para facilitar manutenção e futuras expansões.
+- **Internacionalização:** Suporte estruturado para PT-BR, EN e ES, visando a expansão Stuchi Europa.
 
-## Architecture
+## 🏗️ Arquitetura do Sistema
 
-- **Frontend:** Vanilla HTML5, CSS3, and JavaScript. Zero build step.
-- **Backend:** Node.js, NestJS, TypeScript, Prisma ORM.
-- **Database:** PostgreSQL.
+O projeto utiliza uma arquitetura desacoplada para garantir velocidade no cliente e segurança no processamento de dados.
+
+- **Frontend:** Vanilla HTML5, CSS3 e JavaScript. Sem etapas de build complexas.
+- **Backend:** Node.js, NestJS, TypeScript e Prisma ORM.
+- **Banco de Dados:** PostgreSQL (Gestão de livros, imprensa e submissões).
 
 ```mermaid
-graph TD;
-    Client[Browser] -->|Static Routing| GHPages[GitHub Pages]
-    GHPages -->|Serves| Frontend[Vanilla HTML/JS]
-    Frontend -->|REST API| Backend[NestJS Server]
-    
-    subgraph Infrastructure
-      Backend -->|Prisma| DB[(PostgreSQL)]
-    end
+graph LR;
+    User((Usuário)) ----> Frontend[Frontend Estático]
+    Frontend ----> API[NestJS API]
+    API ----> DB[(PostgreSQL)]
 ```
 
-## Structure
+## 📂 Estrutura de Pastas
 
 ```text
-/
-├── assets/          # Global styles, images, and client-scripting
-├── backend/         # NestJS application (source, modules, prisma schema)
-├── en/              # English static files
-├── es/              # Spanish static files
-├── *.html           # Portuguese static files (Root)
-└── .gitignore       # Global ignore rules
+.
+├── assets/          # Estilos globais, assets de marca e scripts client-side
+├── backend/         # Núcleo da API (Módulos NestJS e Schema Prisma)
+├── en/, es/         # Arquivos estáticos para suporte multilíngue
+├── *.html           # Páginas principais (Home, Publique Conosco, etc.)
+└── .gitignore       # Regras de versionamento
 ```
 
-## Local Development
+## 🛠️ Desenvolvimento Local
 
-You need to run the frontend and backend separately.
+Para rodar o ecossistema completo em sua máquina:
 
-### Backend Setup
-
-The API runs on `localhost:3000` by default.
-
+### 1. Backend (API)
+A API gerencia a lógica de negócios e submissão de originais.
 ```bash
 cd backend
 npm install
-
-# Setup env vars (use .env.example)
-# Add your database URL
-cp .env.example .env
-
-# Run database migrations
+cp .env.example .env  # Configure suas credenciais do DB
 npx prisma migrate dev
-
-# Start development server
 npm run start:dev
 ```
 
-### Frontend Setup
-
-Serve the root directory using any local static server.
-
+### 2. Frontend
+Como é puramente estático, utilize qualquer servidor local de sua preferência:
 ```bash
-# Using 'serve'
+# Exemplo com 'serve'
 npx serve .
 
-# Or using python
+# Exemplo com Python
 python -m http.server 8000
 ```
 
-*Developed by [gabriel-g-dev](https://github.com/gabriel-g-dev).*
+---
 
-> **Live Production Site:** [Stuchi Editora](https://gabriel-g-dev.github.io/stuchi-editora/)
+## ✉️ Contato & Presença
+- **Email:** [Contatos@stuchieditora.com](mailto:Contatos@stuchieditora.com)
+- **WhatsApp:** [Entre em contato](https://wa.me/5511969569809)
+- **Instagram:** [@stuchi_editora](https://www.instagram.com/stuchi_editora/)
+
+**Site Oficial:** [stuchieditora.com](https://gabriel-g-dev.github.io/stuchi-editora/)
+
+Projeto desenvolvido por Gabriel Garcia como parte de estudos e projetos em desenvolvimento web.
