@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -55,10 +55,10 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500,700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-    rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500,700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500,700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" media="all">
 
+  <link rel="preload" as="style" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -74,7 +74,7 @@
   <header class="header" id="siteHeader">
     <div class="container header__inner">
       <a class="brand" href="index.html" aria-label="Ir para o início" title="Stuchi Editora | Formando novos autores">
-        <img src="assets/img/logo-stuchi.png" alt="Stuchi Editora - Formando novos autores" class="brand__logo">
+        <img src="assets/img/logo-stuchi.png" alt="Stuchi Editora - Formando novos autores" class="brand__logo" width="342" height="163" fetchpriority="high" loading="eager">
       </a>
 
       <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
@@ -355,8 +355,9 @@
     </footer>
   </main>
 
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>
+
 
