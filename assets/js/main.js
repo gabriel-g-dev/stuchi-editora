@@ -33,12 +33,30 @@ window.addEventListener("scroll", () => {
   else header.classList.remove("header--scrolled");
 }, { passive: true });
 const progressBar = document.getElementById("progressBar");
-window.addEventListener("scroll", () => {
+let docHeight = 0;
+let ticking = false;
+
+function updateScroll() {
   if (!progressBar) return;
   const scrollTop = window.scrollY;
-  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  if (!docHeight) {
+    docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  }
   const p = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
   progressBar.style.width = `${p}%`;
+  ticking = false;
+}
+
+window.addEventListener("scroll", () => {
+  if (!ticking) {
+    window.requestAnimationFrame(updateScroll);
+    ticking = true;
+  }
+}, { passive: true });
+
+// Reset docHeight on resize
+window.addEventListener("resize", () => {
+  docHeight = 0;
 }, { passive: true });
 const items = document.querySelectorAll(".reveal");
 if ("IntersectionObserver" in window) {
@@ -147,8 +165,9 @@ faqItems.forEach(item => {
         if (otherAnswer) otherAnswer.style.maxHeight = null;
       });
       if (!isOpen) {
+        const height = answer.scrollHeight;
         item.classList.add("is-open");
-        answer.style.maxHeight = answer.scrollHeight + "px";
+        answer.style.maxHeight = height + "px";
       }
     });
   }
