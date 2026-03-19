@@ -38,10 +38,29 @@
   <link rel="stylesheet" href="../assets/css/style.css">
 
     <style>
+        /* Typeform Input Styles */
+        .form__input--typeform {
+            background: transparent !important;
+            border: none !important;
+            border-bottom: 2px solid rgba(255,255,255,0.2) !important;
+            border-radius: 0 !important;
+            padding: 12px 0 !important;
+            font-size: 1.25rem !important;
+            transition: all 0.3s ease !important;
+            box-shadow: none !important;
+        }
+        .form__input--typeform:focus {
+            border-bottom: 2px solid #fff !important;
+            background: transparent !important;
+        }
+        .form__input--typeform::placeholder {
+            color: rgba(255,255,255,0.3);
+        }
+
         /* UX Improvements for Form */
         .input-error {
             border-color: #ff4444 !important;
-            box-shadow: 0 0 0 1px #ff4444;
+            border-bottom: 2px solid #ff4444 !important;
         }
 
         .form-feedback-box {
@@ -337,54 +356,56 @@
 
         <section id="formulario" class="section">
             <div class="container">
-                <div class="cta__box reveal form-box" style="background:#000; border:1px solid rgba(255,255,255,0.1);">
-                    <div style="text-align:center; margin-bottom:30px;">
-                        <h2 class="section__title" style="font-size:1.8rem;">Editorial Application</h2>
-                        <p class="section__subtitle">Tell us about yourself and your project.</p>
+                <div class="cta__box reveal form-box" style="background:rgba(255,255,255,0.02); backdrop-filter:blur(20px); border:1px solid rgba(255,255,255,0.08); padding: 48px 32px; border-radius: 24px; box-shadow: 0 30px 60px rgba(0,0,0,0.6);">
+                    <div style="text-align:center; margin-bottom:40px;">
+                        <span class="pill" style="margin-bottom: 12px;">Selection Process</span>
+                        <h2 class="section__title" style="font-size:2.4rem; font-family: 'Fraunces', serif;">Present Your Work</h2>
+                        <p class="section__subtitle">Fill in carefully. This is our first impression of your potential.</p>
                     </div>
 
                     <form id="formPublicacao" class="form">
-                        <div class="form__group">
-                            <label for="nome" class="form__label">Full Name</label>
-                            <input type="text" id="nome" name="Nome" placeholder="How you would like to be called"
-                                class="form__input" required>
+                        <!-- Pergunta 1 -->
+                        <div class="form__group" style="padding: 24px; background: rgba(0,0,0,0.4); border-radius: 16px; border: 1px solid rgba(255,255,255,0.04); margin-bottom: 20px; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='translateY(0)';">
+                            <label for="nome" class="form__label" style="font-size: 1.15rem; color: #fff; margin-bottom: 12px; display: flex; align-items: center; gap: 12px;"><span style="color:var(--muted); font-size: 0.9rem;">01</span> How should we call you?</label>
+                            <input type="text" id="nome" name="Nome" placeholder="Your full name or literary pseudonym" class="form__input form__input--typeform" required>
                         </div>
 
-                        <div class="form__group">
-                            <label for="email" class="form__label">Professional Email</label>
-                            <input type="email" id="email" name="E-mail" placeholder="your@email.com"
-                                class="form__input" required>
+                        <!-- Pergunta 2 -->
+                        <div class="form__group" style="padding: 24px; background: rgba(0,0,0,0.4); border-radius: 16px; border: 1px solid rgba(255,255,255,0.04); margin-bottom: 20px; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='translateY(0)';">
+                            <label for="email" class="form__label" style="font-size: 1.15rem; color: #fff; margin-bottom: 12px; display: flex; align-items: center; gap: 12px;"><span style="color:var(--muted); font-size: 0.9rem;">02</span> What's your best email?</label>
+                            <input type="email" id="email" name="E-mail" placeholder="youremail@example.com" class="form__input form__input--typeform" required>
                         </div>
 
-                        <div class="form__group">
-                            <label for="genero" class="form__label">Literary Genre</label>
-                            <select id="genero" name="Gênero Literário" class="form__select" required>
-                                <option value="" disabled selected>Select main category</option>
+                        <!-- Pergunta 3 -->
+                        <div class="form__group" style="padding: 24px; background: rgba(0,0,0,0.4); border-radius: 16px; border: 1px solid rgba(255,255,255,0.04); margin-bottom: 20px; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='translateY(0)';">
+                            <label for="genero" class="form__label" style="font-size: 1.15rem; color: #fff; margin-bottom: 12px; display: flex; align-items: center; gap: 12px;"><span style="color:var(--muted); font-size: 0.9rem;">03</span> What is the genre of your work?</label>
+                            <select id="genero" name="Gênero Literário" class="form__select form__input--typeform" style="cursor: pointer;" required>
+                                <option value="" disabled selected>Choose the category that best defines your book</option>
                                 <option value="Ficção / Romance">Fiction / Novel</option>
                                 <option value="Poesia">Poetry</option>
-                                <option value="Não-Ficção / Técnico">Non-Fiction / Technical</option>
+                                <option value="Não-Ficção / Técnico">Non-Fiction / Personal Development</option>
                                 <option value="Fantasia / Sci-Fi">Fantasy / Sci-Fi</option>
                                 <option value="Biografia / Memórias">Biography / Memoirs</option>
                                 <option value="Infantil">Children's</option>
-                                <option value="Outro">Other</option>
+                                <option value="Outro">Other format</option>
                             </select>
                         </div>
 
-                        <div class="form__group" id="outro_container" style="display:none;">
-                            <label for="outro" class="form__label">Describe the genre</label>
-                            <input type="text" id="outro" name="Descrição do Gênero (Outro)"
-                                placeholder="Describe the genre or format of your project" class="form__input">
+                        <!-- Pergunta Oculta -->
+                        <div class="form__group" id="outro_container" style="display:none; padding: 24px; background: rgba(0,0,0,0.4); border-radius: 16px; border: 1px solid rgba(255,255,255,0.04); margin-bottom: 20px;">
+                            <label for="outro" class="form__label" style="font-size: 1.15rem; color: #fff; margin-bottom: 12px;">How would you describe the format?</label>
+                            <input type="text" id="outro" name="Descrição do Gênero (Outro)" placeholder="Type the specific genre here" class="form__input form__input--typeform">
                         </div>
 
-                        <div class="form__group">
-                            <label for="pitch" class="form__label">Book Pitch (Summary)</label>
-                            <textarea id="pitch" name="Pitch do Livro" rows="5"
-                                placeholder="What is your work about? What is the main message? (Max 500 characters)"
-                                class="form__textarea" required></textarea>
+                        <!-- Pergunta 4 -->
+                        <div class="form__group" style="padding: 24px; background: rgba(0,0,0,0.4); border-radius: 16px; border: 1px solid rgba(255,255,255,0.04); margin-bottom: 32px; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='translateY(0)';">
+                            <label for="pitch" class="form__label" style="font-size: 1.15rem; color: #fff; margin-bottom: 12px; display: flex; align-items: center; gap: 12px;"><span style="color:var(--muted); font-size: 0.9rem;">04</span> Convince us to read your book (Pitch)</label>
+                            <p style="font-size: 0.85rem; color: var(--muted); margin-bottom: 16px;">Sell your idea. What is it about? What is the main arc or knowledge delivered?</p>
+                            <textarea id="pitch" name="Pitch do Livro" rows="5" placeholder="Start typing your fantastic idea here..." class="form__textarea form__input--typeform" required></textarea>
                         </div>
 
-                        <div style="margin-top:24px;">
-                            <button type="submit" class="btn btn--solid btn--full">Send for analysis</button>
+                        <div style="text-align: right;">
+                            <button type="submit" class="btn btn--solid" style="padding: 16px 40px; font-size: 1.1rem; border-radius: 12px;">Send editorial application →</button>
                         </div>
                     </form>
                 </div>
