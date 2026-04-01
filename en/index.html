@@ -131,13 +131,7 @@
           “Writing a book is a project.<br>Becoming an author is an identity.”
         </p>
 
-        <div
-          style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 12px 24px; border-radius: 99px; margin-bottom: 48px; display: inline-flex; align-items: center; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
-          <p
-            style="font-size: 0.85rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1.5px; margin: 0;">
-            Expansion to franchise model planned for <strong style="color: #fff;">2026</strong>
-          </p>
-        </div>
+
 
         <div class="hero__actions" style="margin-top: 0; justify-content: center; width: 100%;">
           <a href="publique-conosco.html" class="btn btn--solid">Start now</a>
@@ -150,11 +144,27 @@
       <!-- Premium background glow -->
       <div aria-hidden="true" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; max-width: 1000px; height: 100%; background: radial-gradient(circle, rgba(212,175,55,0.04) 0%, rgba(0,0,0,0) 70%); z-index: 0; pointer-events: none;"></div>
       
+      <style>
+        .intl-section-text { text-align: left; }
+        .intl-pill-container { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+        .intl-cards-wrapper { display: flex; gap: 24px; flex-direction: column; }
+        .intl-card {
+          background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); padding: 32px; border-radius: 20px; backdrop-filter: blur(10px); display: flex; align-items: center; gap: 24px; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s; cursor: default;
+        }
+        @media (max-width: 768px) {
+          .intl-section-text { text-align: center; }
+          .intl-pill-container { justify-content: center; }
+          .intl-section-text p { margin-left: auto; margin-right: auto; }
+          .intl-cards-wrapper { align-items: center; width: 100%; }
+          .intl-card { flex-direction: column; text-align: center; width: 100%; max-width: 400px; }
+        }
+      </style>
+
       <div class="container" style="position: relative; z-index: 1;">
         <div class="grid" style="align-items: center; gap: 80px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
           
-          <div class="reveal">
-            <div style="display: inline-flex; align-items: center; gap: 12px; margin-bottom: 24px;">
+          <div class="reveal intl-section-text">
+            <div class="intl-pill-container">
               <span style="height: 1px; width: 40px; background: #d4af37; display: inline-block;"></span>
               <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2.5px; color: #d4af37; font-weight: 700;">International Expansion</span>
             </div>
@@ -162,35 +172,35 @@
               The literary bridge<br><span style="font-style: italic; color: #fff;">Brazil &mdash; Europe</span>
             </h2>
             <p style="font-size: 1.15rem; color: var(--muted); margin-bottom: 40px; line-height: 1.7; font-weight: 400; max-width: 90%;">
-              Our presence in Portugal is not symbolic. We operate with a physical office for rights management, distribution, and events on European soil, opening a real gateway to the Lusophone market for our authors.
+              We have expanded our operations to Europe, broadening the possibilities for our authors seeking international positioning. We offer support for distribution, bookstore presence, strategic connections, and event participation in the European market.
             </p>
-            <a href="portugal.html" class="btn btn--solid" style="background: #fff; color: #000; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; padding: 16px 32px; border-radius: 99px;">Discover Europe Branch</a>
+            <a href="portugal.html" class="btn btn--solid" style="background: #fff; color: #000; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; padding: 16px 32px; border-radius: 99px;">Discover Europe Operation</a>
           </div>
 
-          <div class="reveal" style="display: flex; gap: 24px; flex-direction: column;">
+          <div class="reveal intl-cards-wrapper">
             
-            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); padding: 32px; border-radius: 20px; backdrop-filter: blur(10px); display: flex; align-items: center; gap: 24px; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s; cursor: default;" onmouseover="this.style.transform='translateY(-6px)'; this.style.borderColor='rgba(212,175,55,0.3)';" onmouseout="this.style.transform='none'; this.style.borderColor='rgba(255,255,255,0.05)';">
+            <div class="intl-card" onmouseover="this.style.transform='translateY(-6px)'; this.style.borderColor='rgba(212,175,55,0.3)';" onmouseout="this.style.transform='none'; this.style.borderColor='rgba(255,255,255,0.05)';">
               <div style="width: 80px; height: 80px; border-radius: 50%; overflow: hidden; border: 3px solid rgba(255,255,255,0.1); flex-shrink: 0; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
                 <img src="https://flagcdn.com/br.svg" alt="Flag of Brazil" style="width: 100%; height: 100%; object-fit: cover;">
               </div>
               <div>
-                <h3 style="margin: 0 0 6px; font-size: 1.5rem; font-weight: 600; font-family: 'Playfair Display', serif; letter-spacing: 0.5px;">Brazil HQ</h3>
-                <p style="margin: 0; color: var(--muted); font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                <h3 style="margin: 0 0 6px; font-size: 1.5rem; font-weight: 600; font-family: 'Playfair Display', serif; letter-spacing: 0.5px;">Brazil Operations</h3>
+                <p style="margin: 0; color: var(--muted); font-size: 0.95rem; display: flex; align-items: center; justify-content: inherit; gap: 8px;">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #d4af37;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                   São Paulo, SP
                 </p>
               </div>
             </div>
 
-            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); padding: 32px; border-radius: 20px; backdrop-filter: blur(10px); display: flex; align-items: center; gap: 24px; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s; cursor: default;" onmouseover="this.style.transform='translateY(-6px)'; this.style.borderColor='rgba(212,175,55,0.3)';" onmouseout="this.style.transform='none'; this.style.borderColor='rgba(255,255,255,0.05)';">
+            <div class="intl-card" onmouseover="this.style.transform='translateY(-6px)'; this.style.borderColor='rgba(212,175,55,0.3)';" onmouseout="this.style.transform='none'; this.style.borderColor='rgba(255,255,255,0.05)';">
               <div style="width: 80px; height: 80px; border-radius: 50%; overflow: hidden; border: 3px solid rgba(255,255,255,0.1); flex-shrink: 0; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
                 <img src="https://flagcdn.com/pt.svg" alt="Flag of Portugal" style="width: 100%; height: 100%; object-fit: cover;">
               </div>
               <div>
-                <h3 style="margin: 0 0 6px; font-size: 1.5rem; font-weight: 600; font-family: 'Playfair Display', serif; letter-spacing: 0.5px;">Europe Branch</h3>
-                <p style="margin: 0; color: var(--muted); font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                <h3 style="margin: 0 0 6px; font-size: 1.5rem; font-weight: 600; font-family: 'Playfair Display', serif; letter-spacing: 0.5px;">Europe Operations</h3>
+                <p style="margin: 0; color: var(--muted); font-size: 0.95rem; display: flex; align-items: center; justify-content: inherit; gap: 8px;">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #d4af37;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                  Setúbal, Portugal
+                  Portugal
                 </p>
               </div>
             </div>
