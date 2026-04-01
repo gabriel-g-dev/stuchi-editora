@@ -146,28 +146,55 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="grid" style="align-items: center; gap: 60px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+    <section class="section" style="position: relative; overflow: hidden; padding: 100px 0;">
+      <!-- Premium background glow -->
+      <div aria-hidden="true" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; max-width: 1000px; height: 100%; background: radial-gradient(circle, rgba(212,175,55,0.04) 0%, rgba(0,0,0,0) 70%); z-index: 0; pointer-events: none;"></div>
+      
+      <div class="container" style="position: relative; z-index: 1;">
+        <div class="grid" style="align-items: center; gap: 80px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+          
           <div class="reveal">
-            <div class="pill" style="margin-left: 0;">Expansão Internacional</div>
-            <h2 class="section__title" style="margin-bottom: 16px; text-align: left;">Ponte Literária Brasil - Europa</h2>
-            <p style="font-size: 1.1rem; color: var(--muted); margin-bottom: 24px; line-height: 1.6;">
-              Nossa presença em Portugal não é simbólica. Contamos com um escritório físico dedicado à gestão de direitos, distribuição e eventos literários em solo europeu. A Stuchi Editora oferece aos autores uma porta de entrada real para o mercado lusófono.
+            <div style="display: inline-flex; align-items: center; gap: 12px; margin-bottom: 24px;">
+              <span style="height: 1px; width: 40px; background: #d4af37; display: inline-block;"></span>
+              <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2.5px; color: #d4af37; font-weight: 700;">Expansão Internacional</span>
+            </div>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 4vw, 3.5rem); line-height: 1.1; margin-bottom: 24px; font-weight: 500;">
+              A ponte literária<br><span style="font-style: italic; color: #fff;">Brasil &mdash; Europa</span>
+            </h2>
+            <p style="font-size: 1.15rem; color: var(--muted); margin-bottom: 40px; line-height: 1.7; font-weight: 400; max-width: 90%;">
+              Nossa presença em Portugal não é simbólica. Atuamos com escritório físico para a gestão de direitos, distribuição e eventos em solo europeu, abrindo uma entrada real ao mercado lusófono para nossos autores.
             </p>
-            <a href="portugal.html" class="btn btn--solid">Conhecer a filial</a>
+            <a href="portugal.html" class="btn btn--solid" style="background: #fff; color: #000; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; padding: 16px 32px; border-radius: 99px;">Conhecer Unidade Europa</a>
           </div>
-          <div class="reveal" style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;">
-            <div style="text-align: center; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 40px 24px; border-radius: 24px; box-shadow: 0 8px 32px rgba(0,0,0,0.3); width: 100%; max-width: 200px;">
-              <div style="font-size: 5.5rem; line-height: 1; margin-bottom: 24px; text-shadow: 0 10px 20px rgba(0,0,0,0.5);">🇧🇷</div>
-              <h3 style="margin: 0; font-size: 1.3rem;">Operação Brasil</h3>
-              <p style="margin: 8px 0 0; font-size: 0.95rem; color: var(--muted);">São Paulo</p>
+
+          <div class="reveal" style="display: flex; gap: 24px; flex-direction: column;">
+            
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); padding: 32px; border-radius: 20px; backdrop-filter: blur(10px); display: flex; align-items: center; gap: 24px; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s; cursor: default;" onmouseover="this.style.transform='translateY(-6px)'; this.style.borderColor='rgba(212,175,55,0.3)';" onmouseout="this.style.transform='none'; this.style.borderColor='rgba(255,255,255,0.05)';">
+              <div style="width: 80px; height: 80px; border-radius: 50%; overflow: hidden; border: 3px solid rgba(255,255,255,0.1); flex-shrink: 0; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                <img src="https://flagcdn.com/br.svg" alt="Bandeira do Brasil" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div>
+                <h3 style="margin: 0 0 6px; font-size: 1.5rem; font-weight: 600; font-family: 'Playfair Display', serif; letter-spacing: 0.5px;">Sede Brasil</h3>
+                <p style="margin: 0; color: var(--muted); font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #d4af37;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  São Paulo, SP
+                </p>
+              </div>
             </div>
-            <div style="text-align: center; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 40px 24px; border-radius: 24px; box-shadow: 0 8px 32px rgba(0,0,0,0.3); width: 100%; max-width: 200px;">
-              <div style="font-size: 5.5rem; line-height: 1; margin-bottom: 24px; text-shadow: 0 10px 20px rgba(0,0,0,0.5);">🇵🇹</div>
-              <h3 style="margin: 0; font-size: 1.3rem;">Operação Europa</h3>
-              <p style="margin: 8px 0 0; font-size: 0.95rem; color: var(--muted);">Setúbal, Portugal</p>
+
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); padding: 32px; border-radius: 20px; backdrop-filter: blur(10px); display: flex; align-items: center; gap: 24px; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s; cursor: default;" onmouseover="this.style.transform='translateY(-6px)'; this.style.borderColor='rgba(212,175,55,0.3)';" onmouseout="this.style.transform='none'; this.style.borderColor='rgba(255,255,255,0.05)';">
+              <div style="width: 80px; height: 80px; border-radius: 50%; overflow: hidden; border: 3px solid rgba(255,255,255,0.1); flex-shrink: 0; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                <img src="https://flagcdn.com/pt.svg" alt="Bandeira de Portugal" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div>
+                <h3 style="margin: 0 0 6px; font-size: 1.5rem; font-weight: 600; font-family: 'Playfair Display', serif; letter-spacing: 0.5px;">Filial Europa</h3>
+                <p style="margin: 0; color: var(--muted); font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #d4af37;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  Setúbal, Portugal
+                </p>
+              </div>
             </div>
+            
           </div>
         </div>
       </div>
