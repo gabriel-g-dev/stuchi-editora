@@ -27,13 +27,14 @@
 
 /* Animated Hero Background + Glow Buttons */
 @keyframes breatheLight {
-  0% { filter: saturate(1.1) brightness(1); transform: scale(1); }
-  50% { filter: saturate(1.3) brightness(1.15); transform: scale(1.03); }
-  100% { filter: saturate(1.1) brightness(1); transform: scale(1); }
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.03); }
+  100% { opacity: 1; transform: scale(1); }
 }
 .hero__bg {
   animation: breatheLight 14s infinite ease-in-out;
   transform-origin: center center;
+  will-change: transform, opacity;
 }
 .btn--solid {
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
