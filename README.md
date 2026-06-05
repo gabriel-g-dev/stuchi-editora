@@ -1,7 +1,7 @@
 <div align="center">
   <img src="assets/img/logo-stuchi.png" alt="Stuchi Editora Logo" width="160"/>
-  <h1>Stuchi Editora</h1>
-  <p><strong>Transformando Autores e Histórias</strong></p>
+  <h1>Stuchi Grupo Editorial</h1>
+  <p><strong>Transformando Histórias em Legado</strong></p>
   <p>Plataforma editorial híbrida integrada: Frontend institucional e API NestJS para gestão de originais.</p>
 </div>
 
@@ -9,7 +9,7 @@
 
 ## 📚 O Projeto
 
-A **Stuchi Editora** é um projeto de site institucional desenvolvido para apresentar uma editora e organizar o processo de envio de originais por novos autores. Este repositório reúne o frontend institucional e a API utilizada para gerenciar envios de manuscritos e conteúdo do site.
+A **Stuchi Grupo Editorial** é um projeto de site institucional desenvolvido para apresentar o grupo editorial e organizar o processo de envio de originais por novos autores. Este repositório reúne o frontend institucional e a API utilizada para gerenciar envios de manuscritos e conteúdo do site.
 
 ### Diferenciais da Implementação
 - **Performance:** Frontend em HTML/JS puro para carregamento instantâneo e SEO otimizado.
