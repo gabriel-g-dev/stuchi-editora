@@ -44,3 +44,254 @@
 .btn--solid:hover {
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.2) !important;
 }
+
+/* ═══════════════════════════════════════════════
+   GRUPO EDITORIAL — Hero Section
+   ═══════════════════════════════════════════════ */
+
+.grupo-hero {
+  position: relative;
+  min-height: 100vh;
+  padding: 140px 0 80px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #0b0b0d 0%, #080808 40%, #0b0b0d 100%);
+}
+
+.grupo-hero__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(800px 600px at 50% 20%, rgba(212, 175, 55, 0.06), transparent 60%),
+    radial-gradient(600px 400px at 20% 80%, rgba(212, 175, 55, 0.03), transparent 60%),
+    radial-gradient(600px 400px at 80% 80%, rgba(212, 175, 55, 0.03), transparent 60%);
+  z-index: 0;
+  animation: pulseGlow 12s infinite ease-in-out;
+  will-change: transform, opacity;
+}
+
+.grupo-hero__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.grupo-hero__crown {
+  display: block;
+  margin: 0 auto 24px;
+  width: 56px;
+  height: 56px;
+  color: #d4af37;
+  filter: drop-shadow(0 4px 12px rgba(212, 175, 55, 0.3));
+}
+
+.grupo-hero__title {
+  font-family: 'Fraunces', 'Fraunces Fallback', serif;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.grupo-hero__subtitle {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #d4af37;
+  margin-bottom: 16px;
+}
+
+.grupo-hero__tagline {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  color: var(--muted);
+  margin-bottom: 12px;
+  font-weight: 400;
+}
+
+.grupo-hero__tagline em {
+  font-style: normal;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: #d4af37;
+}
+
+.grupo-hero__divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 40px auto 48px;
+  max-width: 600px;
+  color: #d4af37;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.grupo-hero__divider::before,
+.grupo-hero__divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.4), transparent);
+}
+
+/* ─── Cards Grid ─── */
+
+.grupo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto 56px;
+}
+
+.grupo-grid--bottom {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 820px;
+}
+
+.grupo-card {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 20px;
+  padding: 32px 20px 28px;
+  text-align: center;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s ease,
+              box-shadow 0.4s ease,
+              background 0.4s ease;
+  cursor: default;
+}
+
+.grupo-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 175, 55, 0.45);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(212, 175, 55, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.grupo-card__icon {
+  display: block;
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 16px;
+  color: #d4af37;
+  filter: drop-shadow(0 2px 6px rgba(212, 175, 55, 0.2));
+}
+
+.grupo-card__title {
+  font-family: 'Fraunces', 'Fraunces Fallback', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #d4af37;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.grupo-card__text {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+/* ─── Valores Bar ─── */
+
+.valores-bar {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 32px 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.12);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.12);
+  margin-bottom: 48px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.valor-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.valor-item__icon {
+  width: 22px;
+  height: 22px;
+  color: #d4af37;
+  flex-shrink: 0;
+}
+
+.valor-item__label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.valor-item__desc {
+  font-size: 0.72rem;
+  color: var(--muted2);
+  display: block;
+  margin-top: 2px;
+}
+
+.grupo-hero__closing {
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted2);
+  font-weight: 500;
+}
+
+.grupo-hero__closing strong {
+  color: #d4af37;
+  font-weight: 700;
+}
+
+/* ─── Responsive ─── */
+
+@media (max-width: 980px) {
+  .grupo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .grupo-grid--bottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .valores-bar {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 500px) {
+  .grupo-grid,
+  .grupo-grid--bottom {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .grupo-card {
+    padding: 24px 16px 20px;
+  }
+  .grupo-hero__crown {
+    width: 40px;
+    height: 40px;
+  }
+  .valores-bar {
+    gap: 16px;
+    padding: 24px 0;
+  }
+  .valor-item {
+    width: calc(50% - 8px);
+    justify-content: center;
+  }
+}
