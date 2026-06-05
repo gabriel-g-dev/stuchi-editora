@@ -1,7 +1,7 @@
-﻿import os, re, shutil
+import os, re, shutil
 
-if os.path.exists('assets/css/style.css'):
-    shutil.move('assets/css/style.css', 'assets/css/style-v2.css')
+if os.path.exists('assets/css/style-v2.css'):
+    shutil.move('assets/css/style-v2.css', 'assets/css/style-v3.css')
 
 if os.path.exists('assets/img/favicon.png'):
     shutil.move('assets/img/favicon.png', 'favicon.ico')
@@ -14,7 +14,7 @@ for root, dirs, files in os.walk('.'):
             with open(path, 'r', encoding='utf-8') as file:
                 content = file.read()
             
-            content = re.sub(r'assets/css/style\.css(?:\?v=\d+)?', 'assets/css/style-v2.css', content)
+            content = re.sub(r'assets/css/style-v2\.css(?:\?v=\d+)?', 'assets/css/style-v3.css', content)
             
             depth = len(os.path.relpath(path, '.').split(os.sep)) - 1
             prefix = '../' * depth if depth > 0 else ''
