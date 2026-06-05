@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -357,30 +357,26 @@
 
         <section id="formulario" class="section">
             <div class="container">
-                <div class="cta__box reveal form-box" style="background:rgba(255,255,255,0.02); backdrop-filter:blur(20px); border:1px solid rgba(255,255,255,0.08); padding: 48px 32px; border-radius: 24px; box-shadow: 0 30px 60px rgba(0,0,0,0.6);">
-                    <div style="text-align:center; margin-bottom:40px;">
-                        <span class="pill" style="margin-bottom: 12px;">Selection Process</span>
-                        <h2 class="section__title" style="font-size:2.4rem; font-family: 'Fraunces', serif;">Present Your Work</h2>
+                <div class="cta__box reveal form-box">
+                    <div style="text-align:center; margin-bottom:30px;">
+                        <h2 class="section__title" style="font-size:1.8rem;">Present Your Work</h2>
                         <p class="section__subtitle">Fill in carefully. This is our first impression of your potential.</p>
                     </div>
 
                     <form id="formPublicacao" class="form">
-                        <!-- Pergunta 1 -->
-                        <div class="form__group" style="padding: 24px; background: rgba(0,0,0,0.4); border-radius: 16px; border: 1px solid rgba(255,255,255,0.04); margin-bottom: 20px; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='translateY(0)';">
-                            <label for="nome" class="form__label" style="font-size: 1.15rem; color: #fff; margin-bottom: 12px; display: flex; align-items: center; gap: 12px;"><span style="color:var(--muted); font-size: 0.9rem;">01</span> How should we call you?</label>
-                            <input type="text" id="nome" name="Nome" placeholder="Your full name or literary pseudonym" class="form__input form__input--typeform" required>
+                        <div class="form__group">
+                            <label for="nome" class="form__label">How should we call you?</label>
+                            <input type="text" id="nome" name="Nome" placeholder="Your full name or literary pseudonym" class="form__input" required>
                         </div>
 
-                        <!-- Pergunta 2 -->
-                        <div class="form__group" style="padding: 24px; background: rgba(0,0,0,0.4); border-radius: 16px; border: 1px solid rgba(255,255,255,0.04); margin-bottom: 20px; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='translateY(0)';">
-                            <label for="email" class="form__label" style="font-size: 1.15rem; color: #fff; margin-bottom: 12px; display: flex; align-items: center; gap: 12px;"><span style="color:var(--muted); font-size: 0.9rem;">02</span> What's your best email?</label>
-                            <input type="email" id="email" name="E-mail" placeholder="youremail@example.com" class="form__input form__input--typeform" required>
+                        <div class="form__group">
+                            <label for="email" class="form__label">What's your best email?</label>
+                            <input type="email" id="email" name="E-mail" placeholder="youremail@example.com" class="form__input" required>
                         </div>
 
-                        <!-- Pergunta 3 -->
-                        <div class="form__group" style="padding: 24px; background: rgba(0,0,0,0.4); border-radius: 16px; border: 1px solid rgba(255,255,255,0.04); margin-bottom: 20px; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='translateY(0)';">
-                            <label for="genero" class="form__label" style="font-size: 1.15rem; color: #fff; margin-bottom: 12px; display: flex; align-items: center; gap: 12px;"><span style="color:var(--muted); font-size: 0.9rem;">03</span> What is the genre of your work?</label>
-                            <select id="genero" name="Gênero Literário" class="form__select form__input--typeform" style="cursor: pointer;" required>
+                        <div class="form__group">
+                            <label for="genero" class="form__label">What is the genre of your work?</label>
+                            <select id="genero" name="Gênero Literário" class="form__select" required>
                                 <option value="" disabled selected>Choose the category that best defines your book</option>
                                 <option value="Ficção / Romance">Fiction / Novel</option>
                                 <option value="Poesia">Poetry</option>
@@ -392,21 +388,18 @@
                             </select>
                         </div>
 
-                        <!-- Pergunta Oculta -->
-                        <div class="form__group" id="outro_container" style="display:none; padding: 24px; background: rgba(0,0,0,0.4); border-radius: 16px; border: 1px solid rgba(255,255,255,0.04); margin-bottom: 20px;">
-                            <label for="outro" class="form__label" style="font-size: 1.15rem; color: #fff; margin-bottom: 12px;">How would you describe the format?</label>
-                            <input type="text" id="outro" name="Descrição do Gênero (Outro)" placeholder="Type the specific genre here" class="form__input form__input--typeform">
+                        <div class="form__group" id="outro_container" style="display:none;">
+                            <label for="outro" class="form__label">How would you describe the format?</label>
+                            <input type="text" id="outro" name="Descrição do Gênero (Outro)" placeholder="Type the specific genre here" class="form__input">
                         </div>
 
-                        <!-- Pergunta 4 -->
-                        <div class="form__group" style="padding: 24px; background: rgba(0,0,0,0.4); border-radius: 16px; border: 1px solid rgba(255,255,255,0.04); margin-bottom: 32px; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='translateY(0)';">
-                            <label for="pitch" class="form__label" style="font-size: 1.15rem; color: #fff; margin-bottom: 12px; display: flex; align-items: center; gap: 12px;"><span style="color:var(--muted); font-size: 0.9rem;">04</span> Convince us to read your book (Pitch)</label>
-                            <p style="font-size: 0.85rem; color: var(--muted); margin-bottom: 16px;">Sell your idea. What is it about? What is the main arc or knowledge delivered?</p>
-                            <textarea id="pitch" name="Pitch do Livro" rows="5" placeholder="Start typing your fantastic idea here..." class="form__textarea form__input--typeform" required></textarea>
+                        <div class="form__group">
+                            <label for="pitch" class="form__label">Convince us to read your book (Pitch)</label>
+                            <textarea id="pitch" name="Pitch do Livro" rows="5" placeholder="Start typing your fantastic idea here..." class="form__textarea" required></textarea>
                         </div>
 
-                        <div style="text-align: right;">
-                            <button type="submit" class="btn btn--solid" style="padding: 16px 40px; font-size: 1.1rem; border-radius: 12px;">Send editorial application →</button>
+                        <div style="margin-top:24px;">
+                            <button type="submit" class="btn btn--solid btn--full">Send editorial application</button>
                         </div>
                     </form>
                 </div>
