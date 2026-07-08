@@ -1,0 +1,24 @@
+{
+  "name": "stuchi-editora",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">\r   <img src=\"assets/img/logo-stuchi.png\" alt=\"Stuchi Editora Logo\" width=\"160\"/>\r   <h1>Stuchi Grupo Editorial</h1>\r   <p><strong>Transformando Histórias em Legado</strong></p>\r   <p>Plataforma editorial híbrida integrada: Frontend institucional e API NestJS para gestão de originais.</p>\r </div>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gabriel-hub-prog22/stuchi-editora.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Gabriel-hub-prog22/stuchi-editora/issues"
+  },
+  "homepage": "https://github.com/Gabriel-hub-prog22/stuchi-editora#readme",
+  "dependencies": {
+    "jimp": "^1.6.1"
+  }
+}
