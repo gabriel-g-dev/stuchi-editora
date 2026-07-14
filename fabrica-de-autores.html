@@ -35,6 +35,18 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/img/icon-192x192.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <!-- Barra fixa de compra (CTA sempre visivel ao rolar) -->
+  <style>
+    .cta-fixo{position:fixed;left:0;bottom:0;width:100%;z-index:1400;background:rgba(10,10,12,.92);backdrop-filter:blur(10px);border-top:1px solid rgba(212,175,55,.35);box-shadow:0 -8px 30px rgba(0,0,0,.45);padding:12px 16px;transform:translateY(120%);transition:transform .35s ease}
+    .cta-fixo.is-visible{transform:translateY(0)}
+    .cta-fixo__inner{width:90%;max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .cta-fixo__info{display:flex;flex-direction:column;line-height:1.2}
+    .cta-fixo__preco{color:#d4af37;font-weight:700;font-size:1.4rem;font-family:'Fraunces',serif}
+    .cta-fixo__label{color:rgba(255,255,255,.7);font-size:.85rem}
+    .cta-fixo__btn{font-size:1rem;padding:14px 28px;white-space:nowrap;flex-shrink:0}
+    body{padding-bottom:88px}
+    @media (max-width:480px){.cta-fixo__label{display:none}.cta-fixo__preco{font-size:1.2rem}.cta-fixo__btn{padding:12px 20px;font-size:.95rem}}
+  </style>
   <!-- Meta Pixel Code -->
   <script>
   !function(f,b,e,v,n,t,s)
@@ -83,6 +95,12 @@
 
             <div class="container reveal" style="max-width: 800px; margin: 0 auto; text-align: center;">
                 <div class="pill" style="border-color: rgba(212, 175, 55, 0.3); color: #d4af37; margin: 0 auto 24px auto; display: inline-block;">Imersão Primeiras Páginas</div>
+
+                <!-- CTA topo (aparece logo ao abrir a pagina) -->
+                <div style="margin: 8px auto 8px auto; text-align: center;">
+                    <a href="https://go.hotmart.com/P106541407B" target="_blank" rel="noopener" class="btn btn--solid" style="font-size: 1.2rem; padding: 20px 40px; width: 100%; max-width: 400px; display: inline-block;">Garantir Vaga por R$ 37</a>
+                    <div style="font-size: 0.85rem; color: rgba(255,255,255,0.55); margin-top: 10px;">🔒 Pagamento único · Garantia de 7 dias</div>
+                </div>
 
 
 
@@ -353,28 +371,6 @@
             </div>
         </section>
 
-        <!-- Contato -->
-        <section id="contato" class="section section--alt">
-            <div class="container">
-                <div class="contact reveal" style="max-width: 600px; margin: 0 auto; text-align: center;">
-                    <div class="contact__head">
-                        <h2 class="section__title">Ficou com alguma dúvida?</h2>
-                        <p class="section__subtitle">Nossa equipe de suporte está pronta para te ajudar no WhatsApp.</p>
-                    </div>
-
-                    <div class="contact__grid" style="grid-template-columns: 1fr;">
-                        <a class="contact__item" href="https://wa.me/5511969569809?text=Ol%C3%A1!%20Gostaria%20de%20garantir%20minha%20vaga%20na%20Imers%C3%A3o%20Primeiras%20P%C3%A1ginas." id="link-whatsapp" target="_blank" rel="noopener" style="justify-content: center; background: #25D366; border-color: #25D366; text-align: center;">
-                            <div class="contact__icon" style="background: rgba(255,255,255,0.2);">💬</div>
-                            <div>
-                                <h3 style="color: #fff;">Chamar no WhatsApp</h3>
-                                <p style="color: rgba(255,255,255,0.8); margin: 0;">Fale direto com a nossa equipe</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <footer class="footer">
             <div class="container footer__inner">
                 <p>&copy; 2026 Stuchi Editora &mdash; Todos os direitos reservados.</p>
@@ -384,7 +380,31 @@
         </footer>
     </main>
 
+    <!-- Barra fixa de compra (aparece ao rolar a pagina) -->
+    <div class="cta-fixo" id="ctaFixo">
+        <div class="cta-fixo__inner">
+            <div class="cta-fixo__info">
+                <span class="cta-fixo__preco">R$ 37</span>
+                <span class="cta-fixo__label">Imersão Primeiras Páginas · 19 de Julho</span>
+            </div>
+            <a href="https://go.hotmart.com/P106541407B" target="_blank" rel="noopener" class="btn btn--solid cta-fixo__btn">Garantir Vaga</a>
+        </div>
+    </div>
+
     <script src="assets/js/main.js" defer></script>
+    <script>
+      // Mostra a barra fixa de compra depois que o usuario rola um pouco
+      (function () {
+        var bar = document.getElementById('ctaFixo');
+        if (!bar) return;
+        function onScroll() {
+          if (window.scrollY > 500) { bar.classList.add('is-visible'); }
+          else { bar.classList.remove('is-visible'); }
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+      })();
+    </script>
 </body>
 
 </html>
